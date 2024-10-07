@@ -25,34 +25,24 @@ const Navbar = ({ activeSection }) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [prevScrollPos]);
 
-  const handleLinkClick = (e, section) => {
-    if (section === 'home') {
-      e.preventDefault();
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth',
-      });
-    }
-  };
+  
 
   return (
     <nav
-      className={`fixed top-0 w-full flex items-center justify-center bg-transparent backdrop-blur-2xl mx-auto transition-transform ease-in-out ${
+      className={`fixed top-0 w-full flex items-center justify-center bg-transparent mx-auto transition-transform ease-in-out ${
         showNavbar ? 'duration-300 translate-y-0' : 'duration-300 -translate-y-full'
       } ${isScrolled ? 'border-b' : ''}`} // Apply border-b only when scrolled
     >
-      <div className={`flex flex-row items-center justify-center max-w-7xl w-full ${isScrolled ? 'py-4 px-5' : 'py-6 px-5'}`}>
+      <div className={`flex flex-row items-center justify-center max-w-7xl w-full backdrop-blur-md bg-blue-50 bg-opacity-80 ${isScrolled ? 'py-4 px-5' : 'py-6 px-5'}`}>
         <div className="text-lg font-montserratBold">
           <a href="#home">@YureyVirtudazo</a>
         </div>
-
         <div className="flex-end ml-auto space-x-3 font-montserratBold">
           <a
             href="#home"
             className={`text-black-500 hover:text-blue-500 underline-animation p-2 ${
               activeSection === 'home' ? 'text-blue-500 active' : ''
             }`}
-            onClick={(e) => handleLinkClick(e, 'home')}
           >
             Home
           </a>
@@ -61,7 +51,6 @@ const Navbar = ({ activeSection }) => {
             className={`text-black-500 hover:text-blue-500 underline-animation p-2 ${
               activeSection === 'about' ? 'text-blue-500 active' : ''
             }`}
-            onClick={(e) => handleLinkClick(e, 'about')}
           >
             About
           </a>
@@ -70,7 +59,6 @@ const Navbar = ({ activeSection }) => {
             className={`text-black-500 hover:text-blue-500 underline-animation p-2 ${
               activeSection === 'education' ? 'text-blue-500 active' : ''
             }`}
-            onClick={(e) => handleLinkClick(e, 'education')}
           >
             Education
           </a>
@@ -79,7 +67,6 @@ const Navbar = ({ activeSection }) => {
             className={`text-black-500 hover:text-blue-500 underline-animation p-2 ${
               activeSection === 'projects' ? 'text-blue-500 active' : ''
             }`}
-            onClick={(e) => handleLinkClick(e, 'projects')}
           >
             Projects
           </a>
@@ -88,7 +75,6 @@ const Navbar = ({ activeSection }) => {
             className={`text-black-500 hover:text-blue-500 underline-animation p-2 ${
               activeSection === 'contact' ? 'text-blue-500 active' : ''
             }`}
-            onClick={(e) => handleLinkClick(e, 'contact')}
           >
             Contact
           </a>

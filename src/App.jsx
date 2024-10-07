@@ -17,7 +17,7 @@ function App() {
       let currentSection = '';
 
       sections.forEach(section => {
-        const sectionTop = section.offsetTop - 200; // Adjusted offset to account for navbar height
+        const sectionTop = section.offsetTop - 400; // Adjusted offset to account for navbar height
         if (window.scrollY >= sectionTop) {
           currentSection = section.getAttribute('id');
         }
@@ -49,7 +49,7 @@ function App() {
   return (
     <div className="flex flex-col items-center min-h-screen bg-blue-50">
       <Navbar activeSection={activeSection} />
-      <div className="max-w-7xl w-full space-y-10 px-5 pt-20">
+      <div className="max-w-7xl w-full space-y-10 px-5 pt-5">
         <Home />
         <About />
         <Education />
