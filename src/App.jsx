@@ -49,7 +49,7 @@ function App() {
   return (
     <div className="flex flex-col items-center min-h-screen bg-blue-50">
       <Navbar activeSection={activeSection} />
-      <div className="max-w-7xl w-full space-y-10 px-5 pt-5">
+      <div className="max-w-7xl w-full space-y-10 px-5">
         <Home />
         <About />
         <Education />

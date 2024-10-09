@@ -9,6 +9,12 @@
 }
 
 @font-face {
+  font-family: 'poppins-bold';
+  src: local("Poppins-Bold"),
+  url('./fonts/Poppins-Bold.ttf') format("truetype");
+}
+
+@font-face {
   font-family: 'montserrat-bold';
   src: local("Montserrat-Bold"),
   url("./fonts/Montserrat-Bold.ttf") format("truetype");
