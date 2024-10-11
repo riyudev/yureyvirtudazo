@@ -7,6 +7,7 @@ export default {
   theme: {
     extend: {
       screens: {
+        'phone': '370px',
         'tablet': '900px'
       },
       fontFamily: {

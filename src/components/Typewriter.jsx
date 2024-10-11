@@ -18,7 +18,7 @@ const Typewriter = () => {
         type(); 
     }, []); 
     return (
-        <p className="font-mono font-semibold text-3xl text-dark-blue" 
+        <p className="font-mono font-semibold text-2xl md:text-3xl text-dark-blue text-center md:text-start" 
            style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.3)' }}>
             {displayedText}
         </p>

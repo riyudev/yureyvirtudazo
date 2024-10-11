@@ -98,48 +98,48 @@ const Navbar = ({ activeSection }) => {
       <nav className={`tablet:hidden flex fixed top-0 w-full items-center justify-center mx-auto transition-transform ease-in-out z-50 
         ${showNavbar ? 'duration-100 translate-y-0' : 'duration-100 -translate-y-full'}`}>
 
-        <div className="bg-slate-500 flex flex-col h-full w-full py-2">
+        <div className="bg-slate-500 flex flex-col h-full w-full p-2 fade-down">
 
-          <div className="flex flex-row items-center justify-center w-full space-x-4 text-black">
+          <div className="flex flex-row items-center justify-center w-full text-black">
 
             <a href='#home' 
               className={`flex-1 flex justify-center underline-animation p-2 ${
                 activeSection === 'home' ? 'text-sky-500 active' : ''
               }`}>
-              <HomeIcon style={{ fontSize: '50px' }} />
+              <HomeIcon style={{ fontSize: '40px' }} />
             </a >
 
             <a href="#about" 
               className={`flex-1 flex justify-center underline-animation p-2 ${
                 activeSection === 'about' ? 'text-sky-500 active' : ''
               }`}>
-              <AccountCircleIcon style={{ fontSize: '50px' }} />
+              <AccountCircleIcon style={{ fontSize: '40px' }} />
             </a>
 
             <a href="#education" 
               className={`flex-1 flex justify-center underline-animation p-2 ${
                 activeSection === 'education' ? 'text-sky-500 active' : ''
               }`}>
-              <SchoolRoundedIcon style={{ fontSize: '50px' }} />
+              <SchoolRoundedIcon style={{ fontSize: '40px' }} />
             </a>
 
             <a href="#projects" 
               className={`flex-1 flex justify-center underline-animation p-2 ${
                 activeSection === 'projects' ? 'text-sky-500 active' : ''
               }`}>
-              <SourceIcon style={{ fontSize: '50px' }} />
+              <SourceIcon style={{ fontSize: '40px' }} />
             </a>
 
             <a href="#contact" 
               className={`flex-1 flex justify-center underline-animation p-2 ${
                 activeSection === 'contact' ? 'text-sky-500 active' : ''
               }`}>
-              <PhoneIcon style={{ fontSize: '50px' }} />
+              <PhoneIcon style={{ fontSize: '40px' }} />
             </a>
 
-            <div className="flex-1 flex justify-center">
-              <Brightness6Icon className="text-slate-900" style={{ fontSize: '50px' }} />
-            </div>
+            <button className="flex-1 flex justify-center p-2">
+              <Brightness6Icon className="text-slate-900" style={{ fontSize: '43px' }} />
+            </button> 
           </div>
         </div>
       </nav>

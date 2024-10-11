@@ -9,21 +9,22 @@ import "../styles/Home.css";
 const Home = () => {
 
   return (
-    <section id="home" className="flex flex-row items-center min-h-screen space-x-14 bg-transparent z-auto">
+    <section id="home" 
+      className="flex tablet:flex-row flex-col justify-center items-center min-h-screen h-fit space-y-10 tablet:space-y-0 tablet:space-x-14 bg-transparent z-auto">
 
-      <div className="w-fit max-w-96 flex justify-center slide-img">
+      <div className="w-fit tablet:max-w-96 max-w-56 flex justify-center slide-img">
         <img className="rounded-full" src={Profile} alt="Profile" />
       </div>
       
-      <div className="w-full min-h-96 flex flex-col justify-center">
+      <div className="w-full min-h-full tablet:min-h-96 flex flex-col justify-center items-center tablet:items-start">
         <Typewriter />
 
-        <h1 className="text-5xl/[60px] font-montserratExtraBold mt-3 mb-16 tracking-wide text-dark-blue slide-h1" 
+        <h1 className="text-4xl/[48px] tablet:text-5xl/[60px] font-montserratExtraBold mt-3 mb-8 tablet:mb-16 tracking-wide text-dark-blue slide-h1 text-center tablet:text-start" 
             style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.2)' }}>
           I Love to <span className="text-sky-400">Develop</span> and <span className="text-sky-400">Design</span> things for the web.
         </h1>
 
-        <div className="flex items-center">
+        <div className="flex flex-col tablet:flex-row items-center space-y-6 tablet:space-y-0">
           <div className="fade-up">
             <button 
               className="px-4 py-3 bg-dark-blue text-sky-400 font-poppinsBold tracking-widest rounded-md w-fit duration-200 ease-in-out hover:opacity-75 hover:scale-110"
@@ -32,7 +33,7 @@ const Home = () => {
             </button>
           </div>
 
-          <div className="flex ml-8 items-center space-x-3 text-sky-400 slide-socials">
+          <div className="flex tablet:ml-8 items-center space-x-6 tablet:space-x-3 text-sky-400 slide-socials">
             <a 
               href="https://web.facebook.com/yurey.oclarit" 
               target='_blank' 
