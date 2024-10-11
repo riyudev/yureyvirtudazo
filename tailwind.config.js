@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        'tablet': '900px'
+      },
       fontFamily: {
         poppinsRegular: ["poppins-regular"],
         poppinsBold: ["poppins-bold"],
