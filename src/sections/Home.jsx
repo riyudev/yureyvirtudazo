@@ -11,24 +11,19 @@ const Home = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
-    // Function to handle window resize
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };
 
-    // Add event listener to handle window resize
     window.addEventListener('resize', handleResize);
 
-    // Clean up event listener on component unmount
     return () => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
 
-  // Set icon size based on window width
   const iconSize = windowWidth < 900 ? '38px' : '50px';
 
-  // Set animations based on window width
   const profileAnimation = windowWidth < 900 ? 'fade-down-mobile' : 'slide-img';
   const h1Animation = windowWidth < 900 ? 'fade-up-h1' : 'slide-h1';
   const btnAnimation = windowWidth < 900 ? 'fade-up-btn' : 'fade-up';
@@ -36,7 +31,7 @@ const Home = () => {
 
   return (
     <section id="home" 
-      className="flex tablet:flex-row flex-col justify-center items-center min-h-screen h-fit space-y-9 tablet:space-y-0 tablet:space-x-14 bg-transparent z-auto scroll-py-6 tablet:scroll-py-0">
+      className="flex tablet:flex-row flex-col justify-center items-center min-h-screen h-fit space-y-9 tablet:space-y-0 tablet:space-x-10 bg-transparent z-auto scroll-py-6 tablet:scroll-py-0">
 
       <div className={`w-fit tablet:max-w-96 max-w-40 flex justify-center ${profileAnimation}`}>
         <img className="rounded-full" src={Profile} alt="Profile" />
@@ -52,18 +47,17 @@ const Home = () => {
 
         <div className="flex flex-col tablet:flex-row items-center space-y-6 fade-up-btn tablet:space-y-0">
           <div className={btnAnimation}>
-            <button 
-              className="py-2 tablet:py-3 px-3 tablet:px-4 bg-dark-blue rounded-md w-fit duration-200 ease-in-out hover:opacity-75 hover:scale-110"
-            >
-              <a href="#projects" className="text-[15px] text-sky-400 font-poppinsBold tracking-widest">PROJECTS</a>
-            </button>
+            <a href="#projects" 
+              className="inline-block py-2 tablet:py-3 px-3 tablet:px-4 bg-dark-blue rounded-md duration-200 ease-in-out hover:opacity-75 hover:scale-[1.12] active:scale-[0.95] text-[15px] text-sky-400 font-poppinsBold tracking-widest">
+              PROJECTS
+            </a>
           </div>
 
           <div className={`flex tablet:ml-8 items-center space-x-6 tablet:space-x-3 text-sky-400 ${socialsAnimation}`}>
             <a 
               href="https://web.facebook.com/yurey.oclarit" 
               target='_blank' 
-              className="hover:scale-110 hover:opacity-75 duration-200 ease-in-out"
+              className="hover:scale-[1.15] active:scale-[0.95] hover:opacity-75 duration-200 ease-in-out"
             >
               <FacebookRoundedIcon 
                 className="bg-dark-blue p-1 rounded-full" 
@@ -74,7 +68,7 @@ const Home = () => {
             <a 
               href="https://www.linkedin.com/in/yurey-virtudazo-3bba2a284/" 
               target='_blank' 
-              className="hover:scale-110 hover:opacity-75 duration-200 ease-in-out"
+              className="hover:scale-[1.15] active:scale-[0.95] hover:opacity-75 duration-200 ease-in-out"
             >
               <LinkedInIcon 
                 className="bg-dark-blue p-1 rounded-full" 
@@ -85,7 +79,7 @@ const Home = () => {
             <a 
               href="https://twitter.com/Yurey_OV/" 
               target='_blank' 
-              className="hover:scale-110 hover:opacity-75 duration-200 ease-in-out"
+              className="hover:scale-[1.15] active:scale-[0.95] hover:opacity-75 duration-200 ease-in-out"
             >
               <XIcon 
                 className="bg-dark-blue p-1 rounded-full" 
@@ -96,7 +90,7 @@ const Home = () => {
             <a 
               href="https://github.com/riyudev" 
               target='_blank' 
-              className="hover:scale-110 hover:opacity-75 duration-200 ease-in-out"
+              className="hover:scale-[1.15] active:scale-[0.95] hover:opacity-75 duration-200 ease-in-out"
             >
               <GitHubIcon 
                 className="bg-dark-blue p-1 rounded-full" 
