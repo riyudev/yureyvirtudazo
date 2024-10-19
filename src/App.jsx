@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Home from './sections/Home';
 import About from './sections/About';
-import Education from './sections/Education';
+import Experience from './sections/Experience';
 import Projects from './sections/Projects';
 import Contact from './sections/Contact';
 import './App.css';
@@ -49,10 +49,10 @@ function App() {
   return (
     <div className="flex flex-col items-center min-h-screen bg-blue-50">
       <Navbar activeSection={activeSection} />
-      <div className="max-w-7xl w-full px-4 tablet:px-5 space-y-10">
+      <div className="max-w-7xl w-full px-4 tablet:px-5 space-y-20">
         <Home />
         <About />
-        <Education />
+        <Experience />
         <Projects />
         <Contact />
       </div>

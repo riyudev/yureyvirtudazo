@@ -3,7 +3,7 @@ import Brightness6Icon from '@mui/icons-material/Brightness6';
 import HomeIcon from '@mui/icons-material/Home';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import SchoolRoundedIcon from '@mui/icons-material/SchoolRounded';
-import SourceIcon from '@mui/icons-material/Source';
+import DriveFolderUploadIcon from '@mui/icons-material/DriveFolderUpload';
 import PhoneIcon from '@mui/icons-material/Phone';
 import '../styles/Navbar.css';
 
@@ -39,7 +39,7 @@ const Navbar = ({ activeSection }) => {
         >
 
           <div className="text-lg font-montserratBold fade-down">
-            <a href="#home">@YureyVirtudazo</a>
+            <a href="/">@YureyVirtudazo</a>
           </div>
 
           <div className="flex-end ml-auto space-x-3 font-montserratBold fade-nav">          
@@ -62,12 +62,12 @@ const Navbar = ({ activeSection }) => {
             </a>
 
             <a
-              href="#education"
+              href="#experience"
               className={`hover:text-sky-500 underline-animation p-2 ${
-                activeSection === 'education' ? 'text-sky-500 active' : ''
+                activeSection === 'experience' ? 'text-sky-500 active' : ''
               }`}
             >
-              Education
+              Experience
             </a>
 
             <a
@@ -116,9 +116,9 @@ const Navbar = ({ activeSection }) => {
               <AccountCircleIcon style={{ fontSize: '35px' }} />
             </a>
 
-            <a href="#education" 
+            <a href="#experience" 
               className={`flex-1 flex justify-center underline-animation p-1 ${
-                activeSection === 'education' ? 'text-sky-500 active' : ''
+                activeSection === 'experience' ? 'text-sky-500 active' : ''
               }`}>
               <SchoolRoundedIcon style={{ fontSize: '35px' }} />
             </a>
@@ -127,7 +127,7 @@ const Navbar = ({ activeSection }) => {
               className={`flex-1 flex justify-center underline-animation p-1 ${
                 activeSection === 'projects' ? 'text-sky-500 active' : ''
               }`}>
-              <SourceIcon style={{ fontSize: '35px' }} />
+              <DriveFolderUploadIcon style={{ fontSize: '35px' }} />
             </a>
 
             <a href="#contact" 
