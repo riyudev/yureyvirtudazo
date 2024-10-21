@@ -38,9 +38,9 @@ const Navbar = ({ activeSection }) => {
           isScrolled ? 'py-4 px-5' : 'py-6 px-5'}`}
         >
 
-          <div className="text-lg font-montserratBold fade-down">
+          <h1 className="text-lg font-montserratBold fade-down">
             <a href="/">@YureyVirtudazo</a>
-          </div>
+          </h1>
 
           <div className="flex-end ml-auto space-x-3 font-montserratBold fade-nav">          
             <a

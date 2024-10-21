@@ -35,7 +35,7 @@ function About() {
         </p>
       </header>
 
-      <figure className="flex flex-col-reverse tablet:flex-row items-center justify-center tablet:space-x-5 bg-slate-200/90 p-10 tablet:p-12 rounded-lg shadow-md">
+      <figure className="flex flex-col-reverse tablet:flex-row items-center justify-center tablet:space-x-5 bg-dark-blue/5 p-10 tablet:p-12 rounded-lg shadow-md">
 
         <div className="flex flex-col justify-between space-y-4 bg-sky-100 p-3 shadow-lg rounded-lg">
 
@@ -70,7 +70,7 @@ function About() {
         </div>
       </figure> 
 
-      <div className="flex flex-col space-y-5 bg-slate-200/90 px-10 tablet:px-12 pt-8 tablet:pt-10 pb-10 tablet:pb-12 rounded-lg shadow-md">
+      <div className="flex flex-col space-y-5 bg-dark-blue/5 px-10 tablet:px-12 pt-8 tablet:pt-10 pb-10 tablet:pb-12 rounded-lg shadow-md">
         <header className="flex items-center justify-center">
           <h1 className="font-montserratBold text-3xl text-dark-blue">
             Tech
@@ -90,38 +90,38 @@ function About() {
               Frontend
             </h2>
 
-            <div className="grid grid-cols-3 gap-3">
-              <div className="flex flex-col tablet:hover:bg-slate-300 transition-colors duration-200 items-center p-4 rounded-lg">
+            <div className="grid grid-cols-3 gap-1">
+              <div className="flex flex-col tablet:hover:bg-slate-300/60 items-center p-5 rounded-md">
                 <StackIcon name="html5" className="size-12" />
                 <p className="font-poppinsRegular tracking-wide text-sm">HTML5</p>
               </div>
 
-              <div className="flex flex-col tablet:hover:bg-slate-300 transition-colors duration-200 items-center p-4 rounded-lg">
+              <div className="flex flex-col tablet:hover:bg-slate-300/60 items-center p-5 rounded-md">
                 <StackIcon name="css3" className="size-12" />
                 <p className="font-poppinsRegular tracking-wide text-sm">CSS3</p>
               </div>
 
-              <div className="flex flex-col tablet:hover:bg-slate-300 transition-colors duration-200 items-center p-4 rounded-lg">
+              <div className="flex flex-col tablet:hover:bg-slate-300/60 items-center p-5 rounded-md">
                 <StackIcon name="js" className="size-12" />
                 <p className="font-poppinsRegular tracking-wide text-sm">JAVASCRIPT</p>
               </div>
 
-              <div className="flex flex-col tablet:hover:bg-slate-300 transition-colors duration-200 items-center p-4 rounded-lg">
+              <div className="flex flex-col tablet:hover:bg-slate-300/60 items-center p-5 rounded-md">
                 <StackIcon name="reactjs" className="size-12" />
                 <p className="font-poppinsRegular tracking-wide text-sm">REACTJS</p>
               </div>
 
-              <div className="flex flex-col tablet:hover:bg-slate-300 transition-colors duration-200 items-center p-4 rounded-lg">
+              <div className="flex flex-col tablet:hover:bg-slate-300/60 items-center p-5 rounded-md">
                 <StackIcon name="tailwindcss" className="size-12" />
                 <p className="font-poppinsRegular tracking-wide text-sm">TAILWINDCSS</p>
               </div>
 
-              <div className="flex flex-col tablet:hover:bg-slate-300 transition-colors duration-200 items-center p-4 rounded-lg">
+              <div className="flex flex-col tablet:hover:bg-slate-300/60 items-center p-5 rounded-md">
                 <StackIcon name="git" className="size-12" />
                 <p className="font-poppinsRegular tracking-wide text-sm">GIT</p>
               </div>
 
-              <div className="flex flex-col tablet:hover:bg-slate-300 transition-colors duration-100 items-center p-4 rounded-lg">
+              <div className="flex flex-col tablet:hover:bg-slate-300/60 items-center p-5 rounded-md">
                 <StackIcon name="wordpress" className="size-12" />
                 <p className="font-poppinsRegular tracking-wide text-sm">WORDPRESS</p>
               </div>
@@ -134,32 +134,32 @@ function About() {
             </h2>
 
             <div className="grid grid-cols-3 gap-3">
-              <div className="flex flex-col tablet:hover:bg-slate-300 transition-colors duration-100 items-center p-4 rounded-lg">
+              <div className="flex flex-col tablet:hover:bg-slate-300/60 items-center p-5 rounded-md">
                 <StackIcon name="nodejs" className="size-12" />
                 <p className="font-poppinsRegular tracking-wide text-sm">NODEJS</p>
               </div>
 
-              <div className="flex flex-col tablet:hover:bg-slate-300 transition-colors duration-100 items-center p-4 rounded-lg">
+              <div className="flex flex-col tablet:hover:bg-slate-300/60 items-center p-5 rounded-md">
                 <StackIcon name="mongodb" className="size-12" />
                 <p className="font-poppinsRegular tracking-wider text-sm">MONGODB</p>
               </div>
 
-              <div className="flex flex-col tablet:hover:bg-slate-300 transition-colors duration-100 items-center p-4 rounded-lg">
+              <div className="flex flex-col tablet:hover:bg-slate-300/60 items-center p-5 rounded-md">
                 <StackIcon name="firebase" className="size-12" />
                 <p className="font-poppinsRegular tracking-wide text-sm">FIREBASE</p>
               </div>
 
-              <div className="flex flex-col tablet:hover:bg-slate-300 transition-colors duration-100 items-center p-4 rounded-lg">
+              <div className="flex flex-col tablet:hover:bg-slate-300/60 items-center p-5 rounded-md">
                 <StackIcon name="git" className="size-12" />
                 <p className="font-poppinsRegular tracking-wide text-sm">GIT</p>
               </div>
 
-              <div className="flex flex-col tablet:hover:bg-slate-300 transition-colors duration-100 items-center p-4 rounded-lg">
+              <div className="flex flex-col tablet:hover:bg-slate-300/60 items-center p-5 rounded-md">
                 <StackIcon name="wordpress" className="size-12" />
                 <p className="font-poppinsRegular tracking-wide text-sm">WORDPRESS</p>
               </div>
 
-              <div className="flex flex-col tablet:hover:bg-slate-300 transition-colors duration-100 items-center p-4 rounded-lg">
+              <div className="flex flex-col tablet:hover:bg-slate-300/60 items-center p-5 rounded-md">
                 <StackIcon name="mysql" className="size-12" />
                 <p className="font-poppinsRegular tracking-wide text-sm">MYSQL</p>
               </div>
