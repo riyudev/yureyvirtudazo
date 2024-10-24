@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Profile from "../assets/Muzan.jpg";
-import FacebookRoundedIcon from "@mui/icons-material/FacebookRounded";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import { FaFacebookF, FaLinkedinIn, FaGithub } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import XIcon from "@mui/icons-material/X";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import Typewriter from "../components/Typewriter";
@@ -55,57 +55,41 @@ const Home = () => {
           <div className={btnAnimation}>
             <a
               href="#projects"
-              className="inline-block py-2 tablet:py-3 px-3 tablet:px-4 bg-slate-900 rounded-md duration-200 ease-in-out hover:opacity-75 hover:scale-[1.12] active:scale-[0.95] text-[15px] text-sky-400 font-poppinsBold tracking-widest"
+              className="inline-block py-2 tablet:py-3 px-3 tablet:px-4 bg-sky-400 rounded-md duration-200 ease-in-out hover:opacity-75 hover:scale-[1.12] active:scale-[0.95] text-[15px] text-slate-900 font-poppinsBold tracking-widest"
             >
               PROJECTS
             </a>
           </div>
 
           <div
-            className={`flex tablet:ml-8 items-center space-x-6 tablet:space-x-3 text-sky-400 ${socialsAnimation}`}
+            className={`flex tablet:ml-8 items-center space-x-6 tablet:space-x-3 ${socialsAnimation}`}
           >
             <a
               href="https://web.facebook.com/yurey.oclarit"
               target="_blank"
-              className="hover:scale-[1.15] active:scale-[0.95] hover:opacity-75 duration-200 ease-in-out"
+              className="bg-sky-400 p-3 rounded-full hover:scale-[1.15] active:scale-[0.95] hover:opacity-75 duration-200 ease-in-out border-2 border-slate-900"
             >
-              <FacebookRoundedIcon
-                className="bg-slate-900 p-1 rounded-full"
-                style={{ fontSize: iconSize }}
-              />
+              <FaFacebookF className="text-slate-900 text-2xl" />
             </a>
 
             <a
               href="https://www.linkedin.com/in/yurey-virtudazo-3bba2a284/"
               target="_blank"
-              className="hover:scale-[1.15] active:scale-[0.95] hover:opacity-75 duration-200 ease-in-out"
+              className="bg-sky-400 p-3 rounded-full hover:scale-[1.15] active:scale-[0.95] hover:opacity-75 duration-200 ease-in-out border-2 border-slate-900"
             >
-              <LinkedInIcon
-                className="bg-slate-900 p-1 rounded-full"
-                style={{ fontSize: iconSize }}
-              />
+              <FaLinkedinIn className="text-slate-900 text-2xl" />
             </a>
 
             <a
               href="https://twitter.com/Yurey_OV/"
               target="_blank"
-              className="hover:scale-[1.15] active:scale-[0.95] hover:opacity-75 duration-200 ease-in-out"
+              className="bg-sky-400 p-3 rounded-full hover:scale-[1.15] active:scale-[0.95] hover:opacity-75 duration-200 ease-in-out border-2 border-slate-900"
             >
-              <XIcon
-                className="bg-slate-900 p-1 rounded-full"
-                style={{ fontSize: iconSize }}
-              />
+              <FaXTwitter className="text-slate-900 text-2xl" />
             </a>
 
-            <a
-              href="https://github.com/riyudev"
-              target="_blank"
-              className="hover:scale-[1.15] active:scale-[0.95] hover:opacity-75 duration-200 ease-in-out"
-            >
-              <GitHubIcon
-                className="bg-slate-900 p-1 rounded-full"
-                style={{ fontSize: iconSize }}
-              />
+            <a className="bg-sky-400 p-3 rounded-full hover:scale-[1.15] active:scale-[0.95] hover:opacity-75 duration-200 ease-in-out border-2 border-slate-900">
+              <FaGithub className="text-slate-900 text-2xl" />
             </a>
           </div>
         </div>
