@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from 'react';
-import Brightness6Icon from '@mui/icons-material/Brightness6';
-import HomeIcon from '@mui/icons-material/Home';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import SchoolRoundedIcon from '@mui/icons-material/SchoolRounded';
-import DriveFolderUploadIcon from '@mui/icons-material/DriveFolderUpload';
-import PhoneIcon from '@mui/icons-material/Phone';
-import '../styles/Navbar.css';
+import React, { useState, useEffect } from "react";
+import Brightness6Icon from "@mui/icons-material/Brightness6";
+import HomeIcon from "@mui/icons-material/Home";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import SchoolRoundedIcon from "@mui/icons-material/SchoolRounded";
+import DriveFolderUploadIcon from "@mui/icons-material/DriveFolderUpload";
+import PhoneIcon from "@mui/icons-material/Phone";
+import "../styles/Navbar.css";
 
 const Navbar = ({ activeSection }) => {
-  const [showNavbar, setShowNavbar] = useState(true); 
-  const [prevScrollPos, setPrevScrollPos] = useState(0); 
-  const [isScrolled, setIsScrolled] = useState(false); 
+  const [showNavbar, setShowNavbar] = useState(true);
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,30 +23,34 @@ const Navbar = ({ activeSection }) => {
       setPrevScrollPos(currentScrollPos);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [prevScrollPos]);
 
   return (
     <>
       <nav
         className={`hidden tablet:flex fixed top-0 w-full items-center justify-center bg-transparent mx-auto transition-transform ease-in-out z-50 
-        ${showNavbar ? 'duration-300 translate-y-0' : 'duration-300 -translate-y-full'} ${isScrolled ? 'border-b' : ''}`}    
+        ${
+          showNavbar
+            ? "duration-300 translate-y-0"
+            : "duration-300 -translate-y-full"
+        } ${isScrolled ? "border-b" : ""}`}
       >
-
-        <div className={`flex flex-row items-center justify-center max-w-7xl w-full backdrop-blur-lg bg-blue-50 bg-opacity-80 ${
-          isScrolled ? 'py-4 px-5' : 'py-6 px-5'}`}
+        <div
+          className={`flex flex-row items-center justify-center max-w-7xl w-full backdrop-blur-lg bg-blue-50 bg-opacity-80 ${
+            isScrolled ? "py-4 px-5" : "py-6 px-5"
+          }`}
         >
-
-          <h1 className="text-lg font-montserratBold fade-down">
+          <h1 className="text-lg text-slate-900 font-montserratBold fade-down">
             <a href="/">@YureyVirtudazo</a>
           </h1>
 
-          <div className="flex-end ml-auto space-x-3 font-montserratBold fade-nav">          
+          <div className="flex-end ml-auto space-x-3 font-montserratBold fade-nav text-slate-900">
             <a
               href="#home"
               className={`hover:text-sky-500 underline-animation p-2 ${
-                activeSection === 'home' ? 'text-sky-500 active' : ''
+                activeSection === "home" ? "text-sky-500 active" : ""
               }`}
             >
               Home
@@ -55,7 +59,7 @@ const Navbar = ({ activeSection }) => {
             <a
               href="#about"
               className={`hover:text-sky-500 underline-animation p-2 ${
-                activeSection === 'about' ? 'text-sky-500 active' : ''
+                activeSection === "about" ? "text-sky-500 active" : ""
               }`}
             >
               About
@@ -64,7 +68,7 @@ const Navbar = ({ activeSection }) => {
             <a
               href="#experience"
               className={`hover:text-sky-500 underline-animation p-2 ${
-                activeSection === 'experience' ? 'text-sky-500 active' : ''
+                activeSection === "experience" ? "text-sky-500 active" : ""
               }`}
             >
               Experience
@@ -73,16 +77,16 @@ const Navbar = ({ activeSection }) => {
             <a
               href="#projects"
               className={`hover:text-sky-500 underline-animation p-2 ${
-                activeSection === 'projects' ? 'text-sky-500 active' : ''
+                activeSection === "projects" ? "text-sky-500 active" : ""
               }`}
             >
               Projects
             </a>
-            
+
             <a
               href="#contact"
               className={`hover:text-sky-500 underline-animation p-2 ${
-                activeSection === 'contact' ? 'text-sky-500 active' : ''
+                activeSection === "contact" ? "text-sky-500 active" : ""
               }`}
             >
               Contact
@@ -94,52 +98,68 @@ const Navbar = ({ activeSection }) => {
           </button>
         </div>
       </nav>
-    
-      <nav className={`tablet:hidden flex fixed top-0 w-full items-center justify-center mx-auto transition-transform ease-in-out z-50 
-        ${showNavbar ? 'duration-100 translate-y-0' : 'duration-100 -translate-y-full'}`}>
 
+      <nav
+        className={`tablet:hidden flex fixed top-0 w-full items-center justify-center mx-auto transition-transform ease-in-out z-50 
+        ${
+          showNavbar
+            ? "duration-100 translate-y-0"
+            : "duration-100 -translate-y-full"
+        }`}
+      >
         <div className="bg-blue-50 flex flex-col h-full w-full p-2 fade-down border-b-4">
-
-          <div className="flex flex-row items-center justify-center w-full text-black">
-
-            <a href='#home' 
+          <div className="flex flex-row items-center justify-center w-full text-slate-900">
+            <a
+              href="#home"
               className={`flex-1 flex justify-center underline-animation p-1 ${
-                activeSection === 'home' ? 'text-sky-500 active' : ''
-              }`}>
-              <HomeIcon style={{ fontSize: '35px' }} />
-            </a >
-
-            <a href="#about" 
-              className={`flex-1 flex justify-center underline-animation p-1 ${
-                activeSection === 'about' ? 'text-sky-500 active' : ''
-              }`}>
-              <AccountCircleIcon style={{ fontSize: '35px' }} />
+                activeSection === "home" ? "text-sky-500 active" : ""
+              }`}
+            >
+              <HomeIcon style={{ fontSize: "35px" }} />
             </a>
 
-            <a href="#experience" 
+            <a
+              href="#about"
               className={`flex-1 flex justify-center underline-animation p-1 ${
-                activeSection === 'experience' ? 'text-sky-500 active' : ''
-              }`}>
-              <SchoolRoundedIcon style={{ fontSize: '35px' }} />
+                activeSection === "about" ? "text-sky-500 active" : ""
+              }`}
+            >
+              <AccountCircleIcon style={{ fontSize: "35px" }} />
             </a>
 
-            <a href="#projects" 
+            <a
+              href="#experience"
               className={`flex-1 flex justify-center underline-animation p-1 ${
-                activeSection === 'projects' ? 'text-sky-500 active' : ''
-              }`}>
-              <DriveFolderUploadIcon style={{ fontSize: '35px' }} />
+                activeSection === "experience" ? "text-sky-500 active" : ""
+              }`}
+            >
+              <SchoolRoundedIcon style={{ fontSize: "35px" }} />
             </a>
 
-            <a href="#contact" 
+            <a
+              href="#projects"
               className={`flex-1 flex justify-center underline-animation p-1 ${
-                activeSection === 'contact' ? 'text-sky-500 active' : ''
-              }`}>
-              <PhoneIcon style={{ fontSize: '35px' }} />
+                activeSection === "projects" ? "text-sky-500 active" : ""
+              }`}
+            >
+              <DriveFolderUploadIcon style={{ fontSize: "35px" }} />
+            </a>
+
+            <a
+              href="#contact"
+              className={`flex-1 flex justify-center underline-animation p-1 ${
+                activeSection === "contact" ? "text-sky-500 active" : ""
+              }`}
+            >
+              <PhoneIcon style={{ fontSize: "35px" }} />
             </a>
 
             <button className="flex-1 flex justify-center p-1">
-              <Brightness6Icon className="text-slate-900" style={{ fontSize: '35px' }} />
-            </button> 
+              <Brightness6Icon
+                className="text-slate-900"
+                style={{ fontSize: "35px" }}
+              />
+            </button>
           </div>
         </div>
       </nav>
