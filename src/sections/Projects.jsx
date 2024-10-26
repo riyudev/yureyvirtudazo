@@ -1,22 +1,70 @@
 import React from "react";
 import { TbBrandGithubFilled } from "react-icons/tb";
+import useInView from "../helpers/useInView";
+import useWindowWidth from "../helpers/useWindowWidth";
+import "../styles/Animation.css";
 
 function Projects() {
+  // Using the useInView hook for each animated element
+  const [isInViewHeader, headerRef] = useInView();
+  const [isInViewFigure, figureRef] = useInView();
+
+  const windowWidth = useWindowWidth();
+  const h1head = windowWidth < 900 ? "slide-y-head" : "slide-x-head";
+  const subHead = windowWidth < 900 ? "slide-y-subhead" : "slide-x-subhead";
+
   return (
     <section
       id="projects"
       className="flex flex-col pt-20 space-y-6 tablet:space-y-14 min-h-screen"
     >
-      <header className="flex flex-col items-center tablet:items-start">
-        <h1 className="font-montserratExtraBold text-4xl text-slate-900">
+      {/* Header Section */}
+      <header
+        ref={headerRef}
+        className="flex flex-col items-center tablet:items-start"
+      >
+        <h1
+          className={`${
+            isInViewHeader
+              ? `font-montserratExtraBold text-4xl text-slate-900 ${h1head}`
+              : "hidden"
+          }`}
+        >
           Projects
         </h1>
-        <hr className="border-t-2 border-slate-900 my-1 w-44" />
-        <p className="font-poppinsBold text-lg text-sky-400">recent works</p>
+        <hr
+          className={`${
+            isInViewHeader
+              ? "border-t-2 border-slate-900 my-1 w-44 growing-hr"
+              : ""
+          }`}
+        />
+        <p
+          className={`${
+            isInViewHeader
+              ? `font-poppinsBold text-lg text-sky-400 ${subHead}`
+              : "hidden"
+          }`}
+        >
+          My recent works
+        </p>
       </header>
 
-      <div className="grid grid-cols-1 phone:grid-cols-2 tablet:grid-cols-3 gap-10 bg-slate-900/10 p-12 shadow-md">
-        <div className="bg-sky-100 p-5 space-y-4 shadow-lg rounded-lg flex flex-col h-full">
+      <figure
+        ref={figureRef}
+        className={`${
+          isInViewFigure
+            ? "grid grid-cols-1 phone:grid-cols-2 tablet:grid-cols-3 gap-10 bg-slate-900/10 p-12 shadow-md bg-anim"
+            : ""
+        } `}
+      >
+        <div
+          className={`${
+            isInViewFigure
+              ? "bg-sky-100 p-5 space-y-4 shadow-lg rounded-lg flex flex-col h-ful box-anim1"
+              : "hidden"
+          } `}
+        >
           <h2 className="font-montserratBold text-2xl">Booking System</h2>
           <p className="font-poppinsRegular text-justify">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non est
@@ -48,7 +96,13 @@ function Projects() {
           </div>
         </div>
 
-        <div className="bg-sky-100 p-5 space-y-4 shadow-lg rounded-lg flex flex-col h-full">
+        <div
+          className={`${
+            isInViewFigure
+              ? "bg-sky-100 p-5 space-y-4 shadow-lg rounded-lg flex flex-col h-full box-anim2"
+              : "hidden"
+          } `}
+        >
           <h2 className="font-montserratBold text-2xl">E-commerce App</h2>
           <p className="font-poppinsRegular text-justify flex-grow">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non est
@@ -77,7 +131,13 @@ function Projects() {
           </div>
         </div>
 
-        <div className="bg-sky-100 p-5 space-y-4 shadow-lg rounded-lg flex flex-col h-full">
+        <div
+          className={`${
+            isInViewFigure
+              ? "bg-sky-100 p-5 space-y-4 shadow-lg rounded-lg flex flex-col h-full box-anim3"
+              : "hidden"
+          } `}
+        >
           <h2 className="font-montserratBold text-2xl">Chat Application</h2>
           <p className="font-poppinsRegular text-justify flex-grow">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non est
@@ -106,7 +166,13 @@ function Projects() {
           </div>
         </div>
 
-        <div className="bg-sky-100 p-5 space-y-4 shadow-lg rounded-lg flex flex-col h-full">
+        <div
+          className={`${
+            isInViewFigure
+              ? "bg-sky-100 p-5 space-y-4 shadow-lg rounded-lg flex flex-col h-full box-anim4"
+              : "hidden"
+          } `}
+        >
           <h2 className="font-montserratBold text-2xl">Weather App</h2>
           <p className="font-poppinsRegular text-justify">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non est
@@ -132,7 +198,13 @@ function Projects() {
           </div>
         </div>
 
-        <div className="bg-sky-100 p-5 space-y-4 shadow-lg rounded-lg flex flex-col h-full">
+        <div
+          className={`${
+            isInViewFigure
+              ? "bg-sky-100 p-5 space-y-4 shadow-lg rounded-lg flex flex-col h-full box-anim5"
+              : "hidden"
+          } `}
+        >
           <h2 className="font-montserratBold text-2xl">Task Management App</h2>
           <p className="font-poppinsRegular text-justify">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non est
@@ -158,7 +230,13 @@ function Projects() {
           </div>
         </div>
 
-        <div className="bg-sky-100 p-5 space-y-4 shadow-lg rounded-lg flex flex-col h-full">
+        <div
+          className={`${
+            isInViewFigure
+              ? "bg-sky-100 p-5 space-y-4 shadow-lg rounded-lg flex flex-col h-full box-anim6"
+              : "hidden"
+          } `}
+        >
           <h2 className="font-montserratBold text-2xl">Quiz App</h2>
           <p className="font-poppinsRegular text-justify">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non est
@@ -183,7 +261,7 @@ function Projects() {
             </button>
           </div>
         </div>
-      </div>
+      </figure>
     </section>
   );
 }

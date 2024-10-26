@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import Brightness6Icon from "@mui/icons-material/Brightness6";
 import HomeIcon from "@mui/icons-material/Home";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import SchoolRoundedIcon from "@mui/icons-material/SchoolRounded";
-import DriveFolderUploadIcon from "@mui/icons-material/DriveFolderUpload";
-import PhoneIcon from "@mui/icons-material/Phone";
+import { BsPersonWorkspace } from "react-icons/bs";
+import { PiStackSimpleFill } from "react-icons/pi";
+import { GrContact } from "react-icons/gr";
+import { MdDarkMode } from "react-icons/md";
 import "../styles/Navbar.css";
 
 const Navbar = ({ activeSection }) => {
@@ -93,8 +93,8 @@ const Navbar = ({ activeSection }) => {
             </a>
           </div>
 
-          <button className="ml-3 fade-nav">
-            <Brightness6Icon />
+          <button className="ml-3 fade-nav text-2xl">
+            <MdDarkMode />
           </button>
         </div>
       </nav>
@@ -133,7 +133,7 @@ const Navbar = ({ activeSection }) => {
                 activeSection === "experience" ? "text-sky-500 active" : ""
               }`}
             >
-              <SchoolRoundedIcon style={{ fontSize: "35px" }} />
+              <BsPersonWorkspace className="p-1" style={{ fontSize: "39px" }} />
             </a>
 
             <a
@@ -142,7 +142,7 @@ const Navbar = ({ activeSection }) => {
                 activeSection === "projects" ? "text-sky-500 active" : ""
               }`}
             >
-              <DriveFolderUploadIcon style={{ fontSize: "35px" }} />
+              <PiStackSimpleFill style={{ fontSize: "38px" }} />
             </a>
 
             <a
@@ -151,11 +151,11 @@ const Navbar = ({ activeSection }) => {
                 activeSection === "contact" ? "text-sky-500 active" : ""
               }`}
             >
-              <PhoneIcon style={{ fontSize: "35px" }} />
+              <GrContact className="p-1" style={{ fontSize: "38px" }} />
             </a>
 
             <button className="flex-1 flex justify-center p-1">
-              <Brightness6Icon
+              <MdDarkMode
                 className="text-slate-900"
                 style={{ fontSize: "35px" }}
               />

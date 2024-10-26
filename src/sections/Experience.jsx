@@ -1,25 +1,72 @@
 import React from "react";
 import Logo from "../assets/reachright.png";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import useInView from "../helpers/useInView";
+import useWindowWidth from "../helpers/useWindowWidth";
+import "../styles/Animation.css";
 
 function Experience() {
+  // Using the useInView hook for each animated element
+  const [isInViewHeader, headerRef] = useInView();
+  const [isInViewFigure, figureRef] = useInView();
+
+  const windowWidth = useWindowWidth();
+  const h1head = windowWidth < 900 ? "slide-y-head" : "slide-x-head";
+  const subHead = windowWidth < 900 ? "slide-y-subhead" : "slide-x-subhead";
+
   return (
     <section
       id="experience"
       className="flex flex-col pt-20 space-y-6 tablet:space-y-14"
     >
-      <header className="flex flex-col items-center tablet:items-start">
-        <h1 className="font-montserratExtraBold text-4xl text-slate-900">
+      {/* Header Section */}
+      <header
+        ref={headerRef}
+        className="flex flex-col items-center tablet:items-start"
+      >
+        <h1
+          className={`${
+            isInViewHeader
+              ? `font-montserratExtraBold text-4xl text-slate-900 ${h1head}`
+              : "hidden"
+          }`}
+        >
           Experience
         </h1>
-        <hr className="border-t-2 border-slate-900 my-1 w-56" />
-        <p className="font-poppinsBold text-lg text-sky-400">
-          what I have done?
+        <hr
+          className={`${
+            isInViewHeader
+              ? "border-t-2 border-slate-900 my-1 w-56 growing-hr"
+              : ""
+          }`}
+        />
+        <p
+          className={`${
+            isInViewHeader
+              ? `font-poppinsBold text-lg text-sky-400 ${subHead}`
+              : "hidden"
+          }`}
+        >
+          What I have done
         </p>
       </header>
 
-      <figure className="flex flex-col tablet:flex-row gap-y-4 tablet:space-x-5 bg-slate-200/90 p-10 tablet:p-12 rounded-lg shadow-md">
-        <div className="flex flex-col justify-center items-center tablet:items-start bg-sky-100 p-4 shadow-lg rounded-lg">
+      <figure
+        ref={figureRef}
+        className={`${
+          isInViewFigure
+            ? "flex flex-col tablet:flex-row gap-y-4 tablet:space-x-5 bg-slate-200/90 p-10 tablet:p-12 rounded-lg shadow-md bg-anim"
+            : ""
+        } `}
+      >
+        {/*1st div wrapper*/}
+        <div
+          className={`${
+            isInViewFigure
+              ? "flex flex-col justify-center items-center tablet:items-start bg-sky-100 p-4 shadow-lg rounded-lg tablet:w-[35%] box-anim1"
+              : "hidden"
+          } `}
+        >
           <div className="flex px-5 pt-5 pb-2 max-w-xs tablet:max-w-none">
             <img
               className="tablet:max-w-xs bg-[#02AED6] p-5"
@@ -30,7 +77,7 @@ function Experience() {
 
           <hr className="border-t-4 border-slate-900/50 my-1 w-full" />
 
-          <div className="flex flex-col items-center tablet:items-start space-y-2 pl-5">
+          <div className="flex flex-col items-center tablet:items-start space-y-2 tablet:pl-5">
             <h2 className="font-montserratBold text-2xl">Web Developer</h2>
             <p className="font-poppinsRegular"> at REACHRIGHT</p>
             <p className="font-poppinsRegular text-xs">
@@ -39,7 +86,14 @@ function Experience() {
           </div>
         </div>
 
-        <div className="flex flex-col justify-between space-y-4 bg-sky-100 p-3 shadow-lg rounded-lg">
+        {/*2nd div wrapper*/}
+        <div
+          className={`${
+            isInViewFigure
+              ? "flex flex-col justify-between space-y-4 bg-sky-100 p-3 shadow-lg rounded-lg tablet:w-[65%] box-anim2"
+              : "hidden"
+          } `}
+        >
           <blockquote className="text-justify p-2">
             <p className="font-poppinsRegular text-slate-900">
               I had the opportunity to craft tailored church websites and update

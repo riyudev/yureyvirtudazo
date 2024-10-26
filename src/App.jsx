@@ -1,48 +1,48 @@
-import React, { useState, useEffect } from 'react';
-import Navbar from './components/Navbar';
-import Home from './sections/Home';
-import About from './sections/About';
-import Experience from './sections/Experience';
-import Projects from './sections/Projects';
-import Contact from './sections/Contact';
-import Footer from './components/Footer';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import Navbar from "./components/Navbar";
+import Home from "./sections/Home";
+import About from "./sections/About";
+import Experience from "./sections/Experience";
+import Projects from "./sections/Projects";
+import Contact from "./sections/Contact";
+import Footer from "./components/Footer";
+import "./App.css";
 
 function App() {
-  const [activeSection, setActiveSection] = useState('home'); // Set 'home' as default active section
+  const [activeSection, setActiveSection] = useState("home"); // Set 'home' as default active section
 
   useEffect(() => {
     // Function to handle scroll and update active section
     const handleScroll = () => {
-      const sections = document.querySelectorAll('section');
-      let currentSection = '';
+      const sections = document.querySelectorAll("section");
+      let currentSection = "";
 
-      sections.forEach(section => {
+      sections.forEach((section) => {
         const sectionTop = section.offsetTop - 400; // Adjusted offset to account for navbar height
         if (window.scrollY >= sectionTop) {
-          currentSection = section.getAttribute('id');
+          currentSection = section.getAttribute("id");
         }
       });
 
-      setActiveSection(currentSection || 'home'); // Default to 'home' if no section is in view
+      setActiveSection(currentSection || "home"); // Default to 'home' if no section is in view
     };
 
     // Handle scroll on page load to set the correct active section
     handleScroll();
 
     // Add event listener for scroll
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   // Scroll to the "Home" section if the page is loaded or refreshed
   useEffect(() => {
-    if (window.location.hash === '' || window.location.hash === '#home') {
+    if (window.location.hash === "" || window.location.hash === "#home") {
       window.scrollTo({
-        top: document.getElementById('home').offsetTop - 80, // Adjust for navbar height
-        behavior: 'smooth'
+        top: document.getElementById("home").offsetTop - 80, // Adjust for navbar height
+        behavior: "smooth",
       });
     }
   }, []);

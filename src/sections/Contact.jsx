@@ -57,7 +57,7 @@ function Contact() {
         </p>
 
         <div className="flex justify-center w-full px-5 tablet:px-0">
-          <div className="place-items-center bg-sky-100 hover:bg-sky-200 transition-colors duration-300 rounded-md py-5 px-5 my-5 w-[50%] space-y-3">
+          <div className="place-items-center bg-sky-100 hover:bg-sky-200 transition-colors duration-300 rounded-md py-5 px-5 my-5 w-[50%] space-y-3 shadow-lg">
             <MdPermPhoneMsg className="text-sky-400 text-3xl" />
             <p>+639098611178</p>
           </div>
@@ -66,7 +66,7 @@ function Contact() {
 
           <a
             href="mailto:virtudazoy@gmail.com"
-            className="flex flex-col items-center bg-sky-100 hover:bg-sky-200 transition-colors duration-300 rounded-md py-5 px-5 my-5 w-[50%] space-y-3"
+            className="flex flex-col items-center bg-sky-100 hover:bg-sky-200 transition-colors duration-300 rounded-md py-5 px-5 my-5 w-[50%] space-y-3 shadow-lg"
           >
             <IoMdMail className="text-sky-400 text-3xl" />
             <p className="text-center text-sm md:text-base lg:text-lg">

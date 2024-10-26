@@ -2,27 +2,12 @@ import React, { useState, useEffect } from "react";
 import Profile from "../assets/Muzan.jpg";
 import { FaFacebookF, FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import XIcon from "@mui/icons-material/X";
-import GitHubIcon from "@mui/icons-material/GitHub";
 import Typewriter from "../components/Typewriter";
+import useWindowWidth from "../helpers/useWindowWidth";
 import "../styles/Home.css";
 
 const Home = () => {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
-  const iconSize = windowWidth < 900 ? "38px" : "50px";
+  const windowWidth = useWindowWidth();
 
   const profileAnimation = windowWidth < 900 ? "fade-down-mobile" : "slide-img";
   const h1Animation = windowWidth < 900 ? "fade-up-h1" : "slide-h1";
@@ -69,7 +54,7 @@ const Home = () => {
               target="_blank"
               className="bg-sky-400 p-3 rounded-full hover:scale-[1.15] active:scale-[0.95] hover:opacity-75 duration-200 ease-in-out border-2 border-slate-900"
             >
-              <FaFacebookF className="text-slate-900 text-2xl" />
+              <FaFacebookF className="text-slate-900 text-lg tablet:text-2xl" />
             </a>
 
             <a
@@ -77,7 +62,7 @@ const Home = () => {
               target="_blank"
               className="bg-sky-400 p-3 rounded-full hover:scale-[1.15] active:scale-[0.95] hover:opacity-75 duration-200 ease-in-out border-2 border-slate-900"
             >
-              <FaLinkedinIn className="text-slate-900 text-2xl" />
+              <FaLinkedinIn className="text-slate-900 text-lg tablet:text-2xl" />
             </a>
 
             <a
@@ -85,11 +70,11 @@ const Home = () => {
               target="_blank"
               className="bg-sky-400 p-3 rounded-full hover:scale-[1.15] active:scale-[0.95] hover:opacity-75 duration-200 ease-in-out border-2 border-slate-900"
             >
-              <FaXTwitter className="text-slate-900 text-2xl" />
+              <FaXTwitter className="text-slate-900 text-lg tablet:text-2xl" />
             </a>
 
             <a className="bg-sky-400 p-3 rounded-full hover:scale-[1.15] active:scale-[0.95] hover:opacity-75 duration-200 ease-in-out border-2 border-slate-900">
-              <FaGithub className="text-slate-900 text-2xl" />
+              <FaGithub className="text-slate-900 text-lg tablet:text-2xl" />
             </a>
           </div>
         </div>
