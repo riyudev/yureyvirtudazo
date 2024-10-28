@@ -3,10 +3,14 @@ import emailjs from "@emailjs/browser";
 import { IoMdMail } from "react-icons/io";
 import { BsFillRocketTakeoffFill } from "react-icons/bs";
 import { MdPermPhoneMsg } from "react-icons/md";
+import useInView from "../helpers/useInView";
+import "../styles/Animation.css";
 
 function Contact() {
   const form = useRef();
   const [alertVisible, setAlertVisible] = useState(false);
+
+  const [isInViewHeader, headerRef] = useInView();
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -36,8 +40,13 @@ function Contact() {
 
   return (
     <section
+      ref={headerRef}
       id="contact"
-      className="flex flex-col gap-y-9 tablet:flex-row items-center justify-center pt-20 gap-x-8 w-full"
+      className={`${
+        isInViewHeader
+          ? "flex flex-col gap-y-9 tablet:flex-row items-center justify-center pt-20 gap-x-8 w-full bg-anim"
+          : "invisible"
+      } `}
     >
       <div className="w-full tablet:max-w-lg space-y-7 px-2 place-items-center tablet:place-items-start">
         <header className="flex flex-col max-w-md w-full justify-center items-center tablet:items-start">
@@ -81,7 +90,7 @@ function Contact() {
         method="POST"
         ref={form}
         onSubmit={sendEmail}
-        className="w-full max-w-lg p-6 bg-slate-900/10 rounded-lg shadow-md space-y-4"
+        className="w-full max-w-lg p-6 bg-slate-900/5 rounded-lg shadow-md space-y-4"
       >
         <h1 className="flex items-center justify-center font-poppinsBold text-3xl text-slate-900 mb-10">
           Message Me

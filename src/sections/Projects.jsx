@@ -16,7 +16,7 @@ function Projects() {
   return (
     <section
       id="projects"
-      className="flex flex-col pt-20 space-y-6 tablet:space-y-14 min-h-screen"
+      className="flex flex-col pt-20 space-y-6 tablet:space-y-14"
     >
       {/* Header Section */}
       <header
@@ -24,26 +24,20 @@ function Projects() {
         className="flex flex-col items-center tablet:items-start"
       >
         <h1
-          className={`${
-            isInViewHeader
-              ? `font-montserratExtraBold text-4xl text-slate-900 ${h1head}`
-              : "hidden"
+          className={`font-montserratExtraBold text-4xl text-slate-900 transition-opacity duration-700 ${
+            isInViewHeader ? `${h1head} ` : "opacity-0"
           }`}
         >
           Projects
         </h1>
         <hr
-          className={`${
-            isInViewHeader
-              ? "border-t-2 border-slate-900 my-1 w-44 growing-hr"
-              : ""
+          className={`border-t-2 border-slate-900 my-1 w-48 transition-width duration-700 ${
+            isInViewHeader ? "growing-hr" : "invisible"
           }`}
         />
         <p
-          className={`${
-            isInViewHeader
-              ? `font-poppinsBold text-lg text-sky-400 ${subHead}`
-              : "hidden"
+          className={`font-poppinsBold text-lg text-sky-400 transition-opacity duration-700 ${
+            isInViewHeader ? `${subHead}` : "opacity-0"
           }`}
         >
           My recent works
@@ -52,17 +46,13 @@ function Projects() {
 
       <figure
         ref={figureRef}
-        className={`${
-          isInViewFigure
-            ? "grid grid-cols-1 phone:grid-cols-2 tablet:grid-cols-3 gap-10 bg-slate-900/10 p-12 shadow-md bg-anim"
-            : ""
+        className={`grid grid-cols-1 phone:grid-cols-2 tablet:grid-cols-3 gap-10 bg-slate-900/5 p-12 shadow-md ${
+          isInViewFigure ? "bg-anim" : "opacity-0"
         } `}
       >
         <div
-          className={`${
-            isInViewFigure
-              ? "bg-sky-100 p-5 space-y-4 shadow-lg rounded-lg flex flex-col h-ful box-anim1"
-              : "hidden"
+          className={`bg-sky-100 p-5 space-y-4 shadow-lg rounded-lg flex flex-col h-full ${
+            isInViewFigure ? "box-anim1" : "opacity-0"
           } `}
         >
           <h2 className="font-montserratBold text-2xl">Booking System</h2>
@@ -97,10 +87,8 @@ function Projects() {
         </div>
 
         <div
-          className={`${
-            isInViewFigure
-              ? "bg-sky-100 p-5 space-y-4 shadow-lg rounded-lg flex flex-col h-full box-anim2"
-              : "hidden"
+          className={`bg-sky-100 p-5 space-y-4 shadow-lg rounded-lg flex flex-col h-full ${
+            isInViewFigure ? "box-anim2" : "opacity-0"
           } `}
         >
           <h2 className="font-montserratBold text-2xl">E-commerce App</h2>
@@ -132,10 +120,8 @@ function Projects() {
         </div>
 
         <div
-          className={`${
-            isInViewFigure
-              ? "bg-sky-100 p-5 space-y-4 shadow-lg rounded-lg flex flex-col h-full box-anim3"
-              : "hidden"
+          className={`bg-sky-100 p-5 space-y-4 shadow-lg rounded-lg flex flex-col h-full ${
+            isInViewFigure ? "box-anim3" : "opacity-0"
           } `}
         >
           <h2 className="font-montserratBold text-2xl">Chat Application</h2>
@@ -167,10 +153,8 @@ function Projects() {
         </div>
 
         <div
-          className={`${
-            isInViewFigure
-              ? "bg-sky-100 p-5 space-y-4 shadow-lg rounded-lg flex flex-col h-full box-anim4"
-              : "hidden"
+          className={`bg-sky-100 p-5 space-y-4 shadow-lg rounded-lg flex flex-col h-full ${
+            isInViewFigure ? "box-anim4" : "opacity-0"
           } `}
         >
           <h2 className="font-montserratBold text-2xl">Weather App</h2>
@@ -199,10 +183,8 @@ function Projects() {
         </div>
 
         <div
-          className={`${
-            isInViewFigure
-              ? "bg-sky-100 p-5 space-y-4 shadow-lg rounded-lg flex flex-col h-full box-anim5"
-              : "hidden"
+          className={`bg-sky-100 p-5 space-y-4 shadow-lg rounded-lg flex flex-col h-full ${
+            isInViewFigure ? "box-anim5" : "opacity-0"
           } `}
         >
           <h2 className="font-montserratBold text-2xl">Task Management App</h2>
@@ -231,10 +213,8 @@ function Projects() {
         </div>
 
         <div
-          className={`${
-            isInViewFigure
-              ? "bg-sky-100 p-5 space-y-4 shadow-lg rounded-lg flex flex-col h-full box-anim6"
-              : "hidden"
+          className={`bg-sky-100 p-5 space-y-4 shadow-lg rounded-lg flex flex-col h-full ${
+            isInViewFigure ? "box-anim6" : "opacity-0"
           } `}
         >
           <h2 className="font-montserratBold text-2xl">Quiz App</h2>

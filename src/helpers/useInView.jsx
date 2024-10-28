@@ -1,16 +1,18 @@
 import { useRef, useEffect, useState } from "react";
 
-const useInView = (threshold = 0.1, rootMargin = "0px 0px -20% 0px") => {
+const useInView = (threshold = 0.1, rootMargin = "0px 0px -10% 0px") => {
   const [isInView, setIsInView] = useState(false);
+  const [hasAnimated, setHasAnimated] = useState(false);
   const elementRef = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         const entry = entries[0];
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting && !hasAnimated) {
           setIsInView(true);
-          observer.disconnect();
+          setHasAnimated(true); // Mark as completed
+          observer.disconnect(); // Stop observing once animation completes
         }
       },
       { threshold, rootMargin }
@@ -21,9 +23,9 @@ const useInView = (threshold = 0.1, rootMargin = "0px 0px -20% 0px") => {
     }
 
     return () => observer.disconnect();
-  }, [threshold, rootMargin]);
+  }, [threshold, rootMargin, hasAnimated]);
 
-  return [isInView, elementRef];
+  return [isInView, elementRef, hasAnimated];
 };
 
 export default useInView;

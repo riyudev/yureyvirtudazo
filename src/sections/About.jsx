@@ -29,26 +29,20 @@ function About() {
         className="flex flex-col items-center tablet:items-start"
       >
         <h1
-          className={`${
-            isInViewHeader
-              ? `font-montserratExtraBold text-4xl text-slate-900 ${h1head}`
-              : "hidden"
+          className={`font-montserratExtraBold text-4xl text-slate-900 transition-opacity duration-700 ${
+            isInViewHeader ? `${h1head} ` : "opacity-0"
           }`}
         >
           About Me
         </h1>
         <hr
-          className={`${
-            isInViewHeader
-              ? "border-t-2 border-slate-900 my-1 w-48 growing-hr"
-              : ""
+          className={`border-t-2 border-slate-900 my-1 w-48 transition-width duration-700 ${
+            isInViewHeader ? "growing-hr" : "invisible"
           }`}
         />
         <p
-          className={`${
-            isInViewHeader
-              ? `font-poppinsBold text-lg text-sky-400 ${subHead}`
-              : "hidden"
+          className={`font-poppinsBold text-lg text-sky-400 transition-opacity duration-700 ${
+            isInViewHeader ? `${subHead}` : "opacity-0"
           }`}
         >
           What I can do?
@@ -58,17 +52,13 @@ function About() {
       {/* Figure Section */}
       <figure
         ref={figureRef}
-        className={`${
-          isInViewFigure
-            ? "flex flex-col-reverse tablet:flex-row items-center justify-center tablet:space-x-5 bg-slate-900/5 p-10 tablet:p-12 rounded-lg shadow-md bg-anim"
-            : ""
+        className={`flex flex-col-reverse tablet:flex-row items-center justify-center tablet:space-x-5 bg-slate-900/5 p-10 tablet:p-12 rounded-lg shadow-md transition-opacity duration-700 ${
+          isInViewFigure ? "bg-anim" : "opacity-0"
         }`}
       >
         <div
-          className={`${
-            isInViewFigure
-              ? "flex flex-col justify-between space-y-4 bg-sky-100 p-3 shadow-lg rounded-lg box-anim1"
-              : "hidden"
+          className={`flex flex-col justify-between space-y-4 bg-sky-100 p-3 shadow-lg rounded-lg ${
+            isInViewFigure ? "box-anim1" : "opacity-0"
           }`}
         >
           <blockquote className="text-justify p-2">
@@ -96,7 +86,7 @@ function About() {
           <div className="flex items-center justify-start space-x-3 text-sky-400">
             <a
               href="#contact"
-              className="flex items-center justify-center py-1 tablet:py-3 px-2 tablet:pl-4 tablet:pr-3 active:bg-slate-900/50 tablet:hover:bg-slate-900/50 tablet:active:scale-[0.90] rounded-md w-fit duration-100 ease-in-out"
+              className="flex items-center justify-center py-1 tablet:py-3 px-2 tablet:pl-4 tablet:pr-3 active:bg-slate-900/5 tablet:hover:bg-slate-900/50 tablet:active:scale-[0.90] rounded-md w-fit duration-100 ease-in-out"
             >
               <p className="tablet:pt-[2px] text-sm text-sky-400 font-poppinsBold tracking-widest">
                 CONTACT
@@ -109,10 +99,8 @@ function About() {
           </div>
         </div>
         <div
-          className={`${
-            isInViewFigure
-              ? "flex items-center justify-center max-w-sm tablet:max-w-md w-fit mb-5 tablet:mb-0"
-              : "hidden"
+          className={`flex items-center justify-center max-w-sm tablet:max-w-md w-fit mb-5 tablet:mb-0 ${
+            isInViewFigure ? "box-anim1" : "opacity-0"
           }`}
         >
           <img
@@ -126,17 +114,11 @@ function About() {
       {/* Tech Stack Section */}
       <div
         ref={techStackRef}
-        className={`${
-          isInViewTechStack
-            ? "flex flex-col space-y-5 bg-slate-900/5 px-10 tablet:px-12 pt-8 tablet:pt-10 pb-10 tablet:pb-12 rounded-lg shadow-md bg-anim"
-            : ""
+        className={`flex flex-col space-y-5 bg-slate-900/5 px-10 tablet:px-12 pt-8 tablet:pt-10 pb-10 tablet:pb-12 rounded-lg shadow-md transition-opacity duration-700 ${
+          isInViewTechStack ? "bg-anim" : "opacity-0"
         }`}
       >
-        <header
-          className={`${
-            isInViewTechStack ? "flex items-center justify-center" : "hidden"
-          }`}
-        >
+        <header className="flex items-center justify-center">
           <h1 className="font-montserratBold text-3xl text-slate-900">Tech</h1>
           <div className="flex items-center justify-center p-2">
             <StarIcon className="text-sky-400" style={{ fontSize: iconSize }} />
@@ -146,19 +128,11 @@ function About() {
           </h1>
         </header>
 
-        <div
-          className={`${
-            isInViewTechStack
-              ? "flex flex-col tablet:flex-row gap-y-5 justify-center gap-x-5"
-              : "hidden"
-          }`}
-        >
+        <div className="flex flex-col tablet:flex-row gap-y-5 justify-center gap-x-5">
           {/* Frontend Box */}
           <div
-            className={`${
-              isInViewTechStack
-                ? "flex flex-col items-center bg-sky-100 shadow-lg rounded-lg tablet:w-[50%] space-y-7 p-3 box-anim1"
-                : "hidden"
+            className={`flex flex-col items-center bg-sky-100 shadow-lg rounded-lg tablet:w-[50%] space-y-7 p-3 ${
+              isInViewTechStack ? "box-anim1" : "opacity-0"
             }`}
           >
             <h2 className="font-poppinsBold text-2xl text-slate-900">
@@ -189,10 +163,8 @@ function About() {
 
           {/* Backend Box */}
           <div
-            className={`${
-              isInViewTechStack
-                ? "flex flex-col items-center bg-sky-100 shadow-lg rounded-lg tablet:w-[50%] space-y-7 p-3 box-anim2"
-                : "hidden"
+            className={`flex flex-col items-center bg-sky-100 shadow-lg rounded-lg tablet:w-[50%] space-y-7 p-3 ${
+              isInViewTechStack ? "box-anim1" : "opacity-0"
             }`}
           >
             <h2 className="font-poppinsBold text-2xl text-slate-900">

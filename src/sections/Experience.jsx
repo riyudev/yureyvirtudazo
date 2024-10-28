@@ -25,46 +25,36 @@ function Experience() {
         className="flex flex-col items-center tablet:items-start"
       >
         <h1
-          className={`${
-            isInViewHeader
-              ? `font-montserratExtraBold text-4xl text-slate-900 ${h1head}`
-              : "hidden"
+          className={`font-montserratExtraBold text-4xl text-slate-900 transition-opacity duration-700 ${
+            isInViewHeader ? `${h1head} ` : "opacity-0"
           }`}
         >
           Experience
         </h1>
         <hr
-          className={`${
-            isInViewHeader
-              ? "border-t-2 border-slate-900 my-1 w-56 growing-hr"
-              : ""
+          className={`border-t-2 border-slate-900 my-1 w-48 transition-width duration-700 ${
+            isInViewHeader ? "growing-hr" : "invisible"
           }`}
         />
         <p
-          className={`${
-            isInViewHeader
-              ? `font-poppinsBold text-lg text-sky-400 ${subHead}`
-              : "hidden"
+          className={`font-poppinsBold text-lg text-sky-400 transition-opacity duration-700 ${
+            isInViewHeader ? `${subHead}` : "opacity-0"
           }`}
         >
-          What I have done
+          What I have done?
         </p>
       </header>
 
       <figure
         ref={figureRef}
-        className={`${
-          isInViewFigure
-            ? "flex flex-col tablet:flex-row gap-y-4 tablet:space-x-5 bg-slate-200/90 p-10 tablet:p-12 rounded-lg shadow-md bg-anim"
-            : ""
+        className={`flex flex-col tablet:flex-row gap-y-4 tablet:space-x-5 bg-slate-900/5 p-10 tablet:p-12 rounded-lg shadow-md ${
+          isInViewFigure ? "bg-anim" : "opacity-0"
         } `}
       >
         {/*1st div wrapper*/}
         <div
-          className={`${
-            isInViewFigure
-              ? "flex flex-col justify-center items-center tablet:items-start bg-sky-100 p-4 shadow-lg rounded-lg tablet:w-[35%] box-anim1"
-              : "hidden"
+          className={`flex flex-col justify-center items-center tablet:items-start bg-sky-100 p-4 shadow-lg rounded-lg ${
+            isInViewFigure ? "box-anim1" : "opacity-0"
           } `}
         >
           <div className="flex px-5 pt-5 pb-2 max-w-xs tablet:max-w-none">
@@ -88,10 +78,8 @@ function Experience() {
 
         {/*2nd div wrapper*/}
         <div
-          className={`${
-            isInViewFigure
-              ? "flex flex-col justify-between space-y-4 bg-sky-100 p-3 shadow-lg rounded-lg tablet:w-[65%] box-anim2"
-              : "hidden"
+          className={`flex flex-col justify-between space-y-4 bg-sky-100 p-3 shadow-lg rounded-lg ${
+            isInViewFigure ? "box-anim1" : "opacity-0"
           } `}
         >
           <blockquote className="text-justify p-2">
