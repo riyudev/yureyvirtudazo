@@ -29,7 +29,7 @@ const Home = () => {
         <Typewriter />
 
         <h1
-          className={`text-4xl/[45px] tablet:text-5xl/[60px] font-montserratExtraBold mt-3 mb-8 tablet:mb-16 tracking-wide text-slate-900 text-center tablet:text-start ${h1Animation}`}
+          className={`text-4xl/[45px] tablet:text-5xl/[60px] font-montserratExtraBold mt-3 mb-8 tablet:mb-16 tracking-wide text-slate-900 dark:text-sky-50 text-center tablet:text-start ${h1Animation}`}
           style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.2)" }}
         >
           <span className="text-sky-400">Develop</span> and{" "}
@@ -52,7 +52,7 @@ const Home = () => {
             <a
               href="https://web.facebook.com/yurey.oclarit"
               target="_blank"
-              className="bg-sky-400 p-3 rounded-full hover:scale-[1.15] active:scale-[0.95] hover:opacity-75 duration-200 ease-in-out border-2 border-slate-900"
+              className="bg-sky-400 p-3 rounded-full hover:scale-[1.15] active:scale-[0.95] hover:opacity-75 duration-200 ease-in-out border-2 border-slate-900 dark:border-sky-50"
             >
               <FaFacebookF className="text-slate-900 text-lg tablet:text-2xl" />
             </a>
@@ -60,7 +60,7 @@ const Home = () => {
             <a
               href="https://www.linkedin.com/in/yurey-virtudazo-3bba2a284/"
               target="_blank"
-              className="bg-sky-400 p-3 rounded-full hover:scale-[1.15] active:scale-[0.95] hover:opacity-75 duration-200 ease-in-out border-2 border-slate-900"
+              className="bg-sky-400 p-3 rounded-full hover:scale-[1.15] active:scale-[0.95] hover:opacity-75 duration-200 ease-in-out border-2 border-slate-900 dark:border-sky-50"
             >
               <FaLinkedinIn className="text-slate-900 text-lg tablet:text-2xl" />
             </a>
@@ -68,12 +68,12 @@ const Home = () => {
             <a
               href="https://twitter.com/Yurey_OV/"
               target="_blank"
-              className="bg-sky-400 p-3 rounded-full hover:scale-[1.15] active:scale-[0.95] hover:opacity-75 duration-200 ease-in-out border-2 border-slate-900"
+              className="bg-sky-400 p-3 rounded-full hover:scale-[1.15] active:scale-[0.95] hover:opacity-75 duration-200 ease-in-out border-2 border-slate-900 dark:border-sky-50"
             >
               <FaXTwitter className="text-slate-900 text-lg tablet:text-2xl" />
             </a>
 
-            <a className="bg-sky-400 p-3 rounded-full hover:scale-[1.15] active:scale-[0.95] hover:opacity-75 duration-200 ease-in-out border-2 border-slate-900">
+            <a className="bg-sky-400 p-3 rounded-full hover:scale-[1.15] active:scale-[0.95] hover:opacity-75 duration-200 ease-in-out border-2 border-slate-900 dark:border-sky-50">
               <FaGithub className="text-slate-900 text-lg tablet:text-2xl" />
             </a>
           </div>

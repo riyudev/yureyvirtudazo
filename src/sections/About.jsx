@@ -29,19 +29,19 @@ function About() {
         className="flex flex-col items-center tablet:items-start"
       >
         <h1
-          className={`font-montserratExtraBold text-4xl text-slate-900 transition-opacity duration-700 ${
+          className={`font-montserratExtraBold text-4xl text-slate-900 dark:text-sky-50 ${
             isInViewHeader ? `${h1head} ` : "opacity-0"
           }`}
         >
           About Me
         </h1>
         <hr
-          className={`border-t-2 border-slate-900 my-1 w-48 transition-width duration-700 ${
+          className={`border-t-2 border-slate-900 dark:border-sky-400/50 my-1 w-48 ${
             isInViewHeader ? "growing-hr" : "invisible"
           }`}
         />
         <p
-          className={`font-poppinsBold text-lg text-sky-400 transition-opacity duration-700 ${
+          className={`font-poppinsBold text-lg text-sky-400 ${
             isInViewHeader ? `${subHead}` : "opacity-0"
           }`}
         >
@@ -52,17 +52,17 @@ function About() {
       {/* Figure Section */}
       <figure
         ref={figureRef}
-        className={`flex flex-col-reverse tablet:flex-row items-center justify-center tablet:space-x-5 bg-slate-900/5 p-10 tablet:p-12 rounded-lg shadow-md transition-opacity duration-700 ${
+        className={`flex flex-col-reverse tablet:flex-row items-center justify-center tablet:space-x-5 bg-slate-900/5 dark:bg-sky-900/15 p-10 tablet:p-12 rounded-lg shadow-md ${
           isInViewFigure ? "bg-anim" : "opacity-0"
         }`}
       >
         <div
-          className={`flex flex-col justify-between space-y-4 bg-sky-100 p-3 shadow-lg rounded-lg ${
+          className={`flex flex-col justify-between space-y-4 bg-sky-100 dark:bg-slate-700/50 p-3 shadow-lg rounded-lg ${
             isInViewFigure ? "box-anim1" : "opacity-0"
           }`}
         >
           <blockquote className="text-justify p-2">
-            <p className="font-poppinsRegular text-slate-900">
+            <p className="font-poppinsRegular text-sky-950 dark:text-sky-200">
               Hi! I'm <b>Yurey</b>, a passionate 2nd-year college student with a
               love for programming and building web applications. Ever since I
               started coding, I've been fascinated by the power of technology to
@@ -72,21 +72,25 @@ function About() {
               tools in web development.
             </p>
           </blockquote>
-          <div className="flex flex-wrap font-mono text-white text-sm">
-            <p className="bg-slate-900/50 py-1 px-2 rounded-full my-1 mx-2">
-              $collaborative_development
-            </p>
-            <p className="bg-slate-900/50 py-1 px-2 rounded-full my-1 mx-2">
-              $responsive_design
-            </p>
-            <p className="bg-slate-900/50 py-1 px-2 rounded-full my-1 mx-2">
-              $creativity
-            </p>
+          <div className="flex flex-wrap font-mono text-sky-50 dark:text-slate-900 text-sm">
+            {[
+              "$collaborative_development",
+              "$responsive_design",
+              "$creativity",
+            ].map((item, index) => (
+              <p
+                key={index}
+                className="bg-slate-900/50 dark:bg-sky-100/50 py-1 px-2 rounded-full my-1 mx-2"
+              >
+                {item}
+              </p>
+            ))}
           </div>
+
           <div className="flex items-center justify-start space-x-3 text-sky-400">
             <a
               href="#contact"
-              className="flex items-center justify-center py-1 tablet:py-3 px-2 tablet:pl-4 tablet:pr-3 active:bg-slate-900/5 tablet:hover:bg-slate-900/50 tablet:active:scale-[0.90] rounded-md w-fit duration-100 ease-in-out"
+              className="flex items-center justify-center py-1 tablet:py-3 px-2 tablet:pl-4 tablet:pr-3 active:bg-slate-900/5 dark:active:bg-sky-400/20 tablet:hover:bg-slate-900/50 dark:tablet:hover:bg-sky-400/20 tablet:active:scale-[0.90] rounded-md w-fit duration-100 ease-in-out"
             >
               <p className="tablet:pt-[2px] text-sm text-sky-400 font-poppinsBold tracking-widest">
                 CONTACT
@@ -114,16 +118,18 @@ function About() {
       {/* Tech Stack Section */}
       <div
         ref={techStackRef}
-        className={`flex flex-col space-y-5 bg-slate-900/5 px-10 tablet:px-12 pt-8 tablet:pt-10 pb-10 tablet:pb-12 rounded-lg shadow-md transition-opacity duration-700 ${
+        className={`flex flex-col space-y-5 bg-slate-900/5 dark:dark:bg-sky-900/15 px-10 tablet:px-12 pt-8 tablet:pt-10 pb-10 tablet:pb-12 rounded-lg shadow-md transition-opacity duration-700 ${
           isInViewTechStack ? "bg-anim" : "opacity-0"
         }`}
       >
         <header className="flex items-center justify-center">
-          <h1 className="font-montserratBold text-3xl text-slate-900">Tech</h1>
+          <h1 className="font-montserratBold text-3xl text-slate-900 dark:text-sky-50">
+            Tech
+          </h1>
           <div className="flex items-center justify-center p-2">
             <StarIcon className="text-sky-400" style={{ fontSize: iconSize }} />
           </div>
-          <h1 className="font-montserratBold text-3xl text-slate-900">
+          <h1 className="font-montserratBold text-3xl text-slate-900 dark:text-sky-50">
             Stacks
           </h1>
         </header>
@@ -131,14 +137,14 @@ function About() {
         <div className="flex flex-col tablet:flex-row gap-y-5 justify-center gap-x-5">
           {/* Frontend Box */}
           <div
-            className={`flex flex-col items-center bg-sky-100 shadow-lg rounded-lg tablet:w-[50%] space-y-7 p-3 ${
+            className={`flex flex-col items-center bg-sky-100 dark:bg-slate-700/50 shadow-lg rounded-lg tablet:w-[50%] space-y-7 p-3 ${
               isInViewTechStack ? "box-anim1" : "opacity-0"
             }`}
           >
-            <h2 className="font-poppinsBold text-2xl text-slate-900">
+            <h2 className="font-poppinsBold text-2xl text-slate-900 dark:text-sky-400">
               Frontend
             </h2>
-            <div className="grid grid-cols-3 gap-1">
+            <div className="grid grid-cols-3 gap-2">
               {[
                 "html5",
                 "css3",
@@ -150,10 +156,10 @@ function About() {
               ].map((tech) => (
                 <div
                   key={tech}
-                  className="flex flex-col tablet:hover:bg-slate-300/60 tablet:hover:scale-110 tablet:active:scale-[0.95] active:scale-[0.90] duration-200 ease-in-out items-center p-5 rounded-md cursor-pointer"
+                  className="flex flex-col tablet:hover:bg-slate-300/60 dark:tablet:hover:bg-sky-400/20 tablet:hover:scale-110 tablet:active:scale-[0.95] active:scale-[0.90] duration-200 ease-in-out items-center p-5 rounded-md cursor-pointer"
                 >
                   <StackIcon name={tech} className="size-12" />
-                  <p className="font-poppinsRegular tracking-wide text-sm">
+                  <p className="font-poppinsRegular tracking-wide text-sm dark:text-sky-200">
                     {tech.toUpperCase()}
                   </p>
                 </div>
@@ -163,14 +169,14 @@ function About() {
 
           {/* Backend Box */}
           <div
-            className={`flex flex-col items-center bg-sky-100 shadow-lg rounded-lg tablet:w-[50%] space-y-7 p-3 ${
+            className={`flex flex-col items-center bg-sky-100 dark:bg-slate-700/50 shadow-lg rounded-lg tablet:w-[50%] space-y-7 p-3 ${
               isInViewTechStack ? "box-anim1" : "opacity-0"
             }`}
           >
-            <h2 className="font-poppinsBold text-2xl text-slate-900">
+            <h2 className="font-poppinsBold text-2xl text-slate-900 dark:text-sky-400">
               Backend
             </h2>
-            <div className="grid grid-cols-3 gap-3">
+            <div className="grid grid-cols-3 gap-2">
               {[
                 "nodejs",
                 "mongodb",
@@ -181,10 +187,10 @@ function About() {
               ].map((tech) => (
                 <div
                   key={tech}
-                  className="flex flex-col tablet:hover:bg-slate-300/60 tablet:hover:scale-110 tablet:active:scale-[0.95] active:scale-[0.90] duration-200 ease-in-out items-center p-5 rounded-md cursor-pointer"
+                  className="flex flex-col tablet:hover:bg-slate-300/60 dark:tablet:hover:bg-sky-400/20 tablet:hover:scale-110 tablet:active:scale-[0.95] active:scale-[0.90] duration-200 ease-in-out items-center p-5 rounded-md cursor-pointer"
                 >
                   <StackIcon name={tech} className="size-12" />
-                  <p className="font-poppinsRegular tracking-wide text-sm">
+                  <p className="font-poppinsRegular tracking-wide text-sm dark:text-sky-200">
                     {tech.toUpperCase()}
                   </p>
                 </div>

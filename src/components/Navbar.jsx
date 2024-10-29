@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from "react";
-import HomeIcon from "@mui/icons-material/Home";
-import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import { MdHome, MdDarkMode, MdLightMode } from "react-icons/md";
+import { IoPersonCircleSharp } from "react-icons/io5";
 import { BsPersonWorkspace } from "react-icons/bs";
 import { PiStackSimpleFill } from "react-icons/pi";
 import { GrContact } from "react-icons/gr";
-import { MdDarkMode } from "react-icons/md";
 import "../styles/Navbar.css";
 
-const Navbar = ({ activeSection }) => {
+const Navbar = ({ activeSection, toggleDarkMode, darkMode }) => {
   const [showNavbar, setShowNavbar] = useState(true);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -35,18 +34,18 @@ const Navbar = ({ activeSection }) => {
           showNavbar
             ? "duration-300 translate-y-0"
             : "duration-300 -translate-y-full"
-        } ${isScrolled ? "border-b" : ""}`}
+        } ${isScrolled ? "border-b dark:border-slate-800" : ""}`}
       >
         <div
-          className={`flex flex-row items-center justify-center max-w-7xl w-full backdrop-blur-lg bg-blue-50 bg-opacity-80 ${
+          className={`flex flex-row items-center justify-center max-w-7xl w-full backdrop-blur-lg bg-blue-50 dark:bg-slate-900 bg-opacity-80 dark:bg-opacity-80 ${
             isScrolled ? "py-4 px-5" : "py-6 px-5"
           }`}
         >
-          <h1 className="text-lg text-slate-900 font-montserratBold fade-down">
+          <h1 className="text-lg text-slate-900 dark:text-sky-50 font-montserratBold fade-down">
             <a href="/">@YureyVirtudazo</a>
           </h1>
 
-          <div className="flex-end ml-auto space-x-3 font-montserratBold fade-nav text-slate-900">
+          <div className="flex-end ml-auto space-x-3 font-montserratBold fade-nav text-slate-900 dark:text-sky-50">
             <a
               href="#home"
               className={`hover:text-sky-500 underline-animation p-2 ${
@@ -93,8 +92,11 @@ const Navbar = ({ activeSection }) => {
             </a>
           </div>
 
-          <button className="ml-3 fade-nav text-2xl">
-            <MdDarkMode />
+          <button
+            onClick={toggleDarkMode}
+            className="ml-3 fade-nav text-3xl text-sky-400"
+          >
+            {darkMode ? <MdLightMode /> : <MdDarkMode />}
           </button>
         </div>
       </nav>
@@ -107,15 +109,15 @@ const Navbar = ({ activeSection }) => {
             : "duration-100 -translate-y-full"
         }`}
       >
-        <div className="bg-blue-50 flex flex-col h-full w-full p-2 fade-down border-b-4">
-          <div className="flex flex-row items-center justify-center w-full text-slate-900">
+        <div className="bg-blue-50 dark:bg-slate-800 flex flex-col h-full w-full p-2 fade-down border-b-4">
+          <div className="flex flex-row items-center justify-center w-full text-slate-900 dark:text-sky-50">
             <a
               href="#home"
               className={`flex-1 flex justify-center underline-animation p-1 ${
                 activeSection === "home" ? "text-sky-500 active" : ""
               }`}
             >
-              <HomeIcon style={{ fontSize: "35px" }} />
+              <MdHome className="text-[35px]" />
             </a>
 
             <a
@@ -124,7 +126,7 @@ const Navbar = ({ activeSection }) => {
                 activeSection === "about" ? "text-sky-500 active" : ""
               }`}
             >
-              <AccountCircleIcon style={{ fontSize: "35px" }} />
+              <IoPersonCircleSharp className="text-[35px]" />
             </a>
 
             <a
@@ -133,7 +135,7 @@ const Navbar = ({ activeSection }) => {
                 activeSection === "experience" ? "text-sky-500 active" : ""
               }`}
             >
-              <BsPersonWorkspace className="p-1" style={{ fontSize: "39px" }} />
+              <BsPersonWorkspace className="p-1 text-[39px]" />
             </a>
 
             <a
@@ -142,7 +144,7 @@ const Navbar = ({ activeSection }) => {
                 activeSection === "projects" ? "text-sky-500 active" : ""
               }`}
             >
-              <PiStackSimpleFill style={{ fontSize: "38px" }} />
+              <PiStackSimpleFill className="text-[38px]" />
             </a>
 
             <a
@@ -151,14 +153,14 @@ const Navbar = ({ activeSection }) => {
                 activeSection === "contact" ? "text-sky-500 active" : ""
               }`}
             >
-              <GrContact className="p-1" style={{ fontSize: "38px" }} />
+              <GrContact className="p-1 text-[38px]" />
             </a>
 
-            <button className="flex-1 flex justify-center p-1">
-              <MdDarkMode
-                className="text-slate-900"
-                style={{ fontSize: "35px" }}
-              />
+            <button
+              onClick={toggleDarkMode}
+              className="flex-1 flex justify-center p-1 bg-sky-400 active:bg-sky-300 rounded-full text-slate-900 text-[35px]"
+            >
+              {darkMode ? <MdLightMode /> : <MdDarkMode />}
             </button>
           </div>
         </div>

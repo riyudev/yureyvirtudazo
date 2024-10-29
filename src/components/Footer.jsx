@@ -21,7 +21,7 @@ function Footer() {
   const iconSize = windowWidth < 900 ? "25px" : "23px";
 
   return (
-    <footer className="flex justify-center w-full border-t-2 mt-10">
+    <footer className="flex justify-center w-full border-t-2 dark:border-slate-700/50 mt-10">
       <div className="flex flex-col gap-y-1 items-center pt-3 pb-4 max-w-7xl w-full">
         <div className="flex items-center space-x-3 text-sky-400">
           <a href="https://web.facebook.com/yurey.oclarit" target="_blank">
@@ -44,7 +44,7 @@ function Footer() {
           </a>
         </div>
 
-        <div className="font-montserratBold text-sm gap-y-1 text-center">
+        <div className="font-montserratBold text-sm gap-y-1 text-slate-900 dark:text-sky-200 text-center">
           <h2>Designed and Built by: Yurey Virtudazo</h2>
           <h2>Copyright &copy; 2024 - All rights reserve</h2>
         </div>

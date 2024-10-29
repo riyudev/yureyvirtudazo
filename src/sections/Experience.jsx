@@ -25,19 +25,19 @@ function Experience() {
         className="flex flex-col items-center tablet:items-start"
       >
         <h1
-          className={`font-montserratExtraBold text-4xl text-slate-900 transition-opacity duration-700 ${
+          className={`font-montserratExtraBold text-4xl text-slate-900 dark:text-sky-50 ${
             isInViewHeader ? `${h1head} ` : "opacity-0"
           }`}
         >
           Experience
         </h1>
         <hr
-          className={`border-t-2 border-slate-900 my-1 w-48 transition-width duration-700 ${
+          className={`border-t-2 border-slate-900 dark:border-sky-400/50 my-1 w-56 ${
             isInViewHeader ? "growing-hr" : "invisible"
           }`}
         />
         <p
-          className={`font-poppinsBold text-lg text-sky-400 transition-opacity duration-700 ${
+          className={`font-poppinsBold text-lg text-sky-400 ${
             isInViewHeader ? `${subHead}` : "opacity-0"
           }`}
         >
@@ -47,13 +47,13 @@ function Experience() {
 
       <figure
         ref={figureRef}
-        className={`flex flex-col tablet:flex-row gap-y-4 tablet:space-x-5 bg-slate-900/5 p-10 tablet:p-12 rounded-lg shadow-md ${
+        className={`flex flex-col tablet:flex-row gap-y-4 tablet:space-x-5 bg-slate-900/5 dark:bg-sky-900/15 p-10 tablet:p-12 rounded-lg shadow-md ${
           isInViewFigure ? "bg-anim" : "opacity-0"
         } `}
       >
         {/*1st div wrapper*/}
         <div
-          className={`flex flex-col justify-center items-center tablet:items-start bg-sky-100 p-4 shadow-lg rounded-lg ${
+          className={`flex flex-col justify-center items-center tablet:items-start bg-sky-100 dark:bg-slate-700/50 p-4 shadow-lg rounded-lg ${
             isInViewFigure ? "box-anim1" : "opacity-0"
           } `}
         >
@@ -65,12 +65,17 @@ function Experience() {
             />
           </div>
 
-          <hr className="border-t-4 border-slate-900/50 my-1 w-full" />
+          <hr className="border-t-4 border-slate-900/50 dark:border-sky-400/50 my-1 w-full" />
 
           <div className="flex flex-col items-center tablet:items-start space-y-2 tablet:pl-5">
-            <h2 className="font-montserratBold text-2xl">Web Developer</h2>
-            <p className="font-poppinsRegular"> at REACHRIGHT</p>
-            <p className="font-poppinsRegular text-xs">
+            <h2 className="font-montserratBold text-2xl text-slate-900 dark:text-sky-400">
+              Web Developer
+            </h2>
+            <p className="font-poppinsRegular text-slate-900 dark:text-sky-200">
+              {" "}
+              at REACHRIGHT
+            </p>
+            <p className="font-poppinsRegular text-xs text-slate-900 dark:text-sky-200">
               6 months - 2023 ~ fulltime
             </p>
           </div>
@@ -78,12 +83,12 @@ function Experience() {
 
         {/*2nd div wrapper*/}
         <div
-          className={`flex flex-col justify-between space-y-4 bg-sky-100 p-3 shadow-lg rounded-lg ${
+          className={`flex flex-col justify-between space-y-4 bg-sky-100 dark:bg-slate-700/50 p-3 shadow-lg rounded-lg ${
             isInViewFigure ? "box-anim1" : "opacity-0"
           } `}
         >
           <blockquote className="text-justify p-2">
-            <p className="font-poppinsRegular text-slate-900">
+            <p className="font-poppinsRegular text-slate-900 dark:text-sky-200">
               I had the opportunity to craft tailored church websites and update
               plugins for over 400 sites during my time at REACHRIGHT. Despite
               being a 1st-year student, I handled significant responsibilities,
@@ -95,26 +100,27 @@ function Experience() {
             </p>
           </blockquote>
 
-          <div className="flex flex-wrap font-mono text-white text-sm">
-            <p className="bg-slate-900/50 py-1 px-2 rounded-full my-1 mx-2">
-              $Wordpress
-            </p>
-            <p className="bg-slate-900/50 py-1 px-2 rounded-full my-1 mx-2">
-              $troubleshooting
-            </p>
-            <p className="bg-slate-900/50 py-1 px-2 rounded-full my-1 mx-2">
-              $responsive_design
-            </p>
-            <p className="bg-slate-900/50 py-1 px-2 rounded-full my-1 mx-2">
-              $tailored_websites
-            </p>
+          <div className="flex flex-wrap font-mono text-sky-50 dark:text-slate-900 text-sm">
+            {[
+              "Wordpress",
+              "$troubleshooting",
+              "$responsive_design",
+              "$tailored_websites",
+            ].map((item, index) => (
+              <p
+                key={index}
+                className="bg-slate-900/50 dark:bg-sky-100/50 py-1 px-2 rounded-full my-1 mx-2"
+              >
+                {item}
+              </p>
+            ))}
           </div>
 
           <div className="flex items-center justify-start space-x-3 text-sky-400">
             <a
               href="https://reachrightstudios.com/"
               target="_blank"
-              className="flex items-center justify-center py-1 tablet:py-3 px-2 tablet:pl-4 tablet:pr-3 active:bg-slate-900/50 tablet:hover:bg-slate-900/50 tablet:active:scale-[0.90] rounded-md w-fit duration-100 ease-in-out"
+              className="flex items-center justify-center py-1 tablet:py-3 px-2 tablet:pl-4 tablet:pr-3 active:bg-slate-900/5 dark:active:bg-sky-400/20 tablet:hover:bg-slate-900/50 dark:tablet:hover:bg-sky-400/20 tablet:active:scale-[0.90] rounded-md w-fit duration-100 ease-in-out"
             >
               <p className="tablet:pt-[2px] text-sm text-sky-400 font-poppinsBold tracking-widest">
                 VISIT
