@@ -108,7 +108,7 @@ function Projects() {
 
       <figure
         ref={figureRef}
-        className={`grid grid-cols-1 phone:grid-cols-2 tablet:grid-cols-3 gap-10 bg-slate-900/5 dark:bg-sky-900/15 p-12 shadow-md ${
+        className={`grid grid-cols-1 phone:grid-cols-2 tablet:grid-cols-3 gap-10 bg-slate-900/5 dark:bg-sky-900/15 p-5 shadow-md ${
           isInViewFigure ? "bg-anim" : "opacity-0"
         }`}
       >

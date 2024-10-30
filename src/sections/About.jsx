@@ -52,7 +52,7 @@ function About() {
       {/* Figure Section */}
       <figure
         ref={figureRef}
-        className={`flex flex-col-reverse tablet:flex-row items-center justify-center tablet:space-x-5 bg-slate-900/5 dark:bg-sky-900/15 p-10 tablet:p-12 rounded-lg shadow-md ${
+        className={`flex flex-col-reverse tablet:flex-row items-center justify-center tablet:space-x-5 bg-slate-900/5 dark:bg-sky-900/15 p-5 tablet:p-12 rounded-lg shadow-md ${
           isInViewFigure ? "bg-anim" : "opacity-0"
         }`}
       >
@@ -118,7 +118,7 @@ function About() {
       {/* Tech Stack Section */}
       <div
         ref={techStackRef}
-        className={`flex flex-col space-y-5 bg-slate-900/5 dark:dark:bg-sky-900/15 px-10 tablet:px-12 pt-8 tablet:pt-10 pb-10 tablet:pb-12 rounded-lg shadow-md transition-opacity duration-700 ${
+        className={`flex flex-col space-y-5 bg-slate-900/5 dark:dark:bg-sky-900/15 p-5 tablet:px-12 tablet:pt-10 tablet:pb-12 rounded-lg shadow-md transition-opacity duration-700 ${
           isInViewTechStack ? "bg-anim" : "opacity-0"
         }`}
       >

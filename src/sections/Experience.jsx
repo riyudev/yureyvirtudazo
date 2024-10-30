@@ -47,7 +47,7 @@ function Experience() {
 
       <figure
         ref={figureRef}
-        className={`flex flex-col tablet:flex-row gap-y-4 tablet:space-x-5 bg-slate-900/5 dark:bg-sky-900/15 p-10 tablet:p-12 rounded-lg shadow-md ${
+        className={`flex flex-col tablet:flex-row gap-y-4 tablet:space-x-5 bg-slate-900/5 dark:bg-sky-900/15 p-5 tablet:p-12 rounded-lg shadow-md ${
           isInViewFigure ? "bg-anim" : "opacity-0"
         } `}
       >

@@ -68,7 +68,9 @@ function Contact() {
         <div className="flex justify-center w-full px-5 tablet:px-0">
           <div className="place-items-center bg-sky-100 dark:bg-slate-700/50 hover:bg-sky-200 dark:hover:bg-sky-800/50 transition-colors duration-300 rounded-md py-5 px-5 my-5 w-[50%] space-y-3 shadow-lg">
             <MdPermPhoneMsg className="text-sky-400 text-3xl" />
-            <p className="text-slate-900 dark:text-sky-200">+639098611178</p>
+            <p className="text-slate-900 dark:text-sky-200 text-xs phone:text-base md:text-lg">
+              +639098611178
+            </p>
           </div>
 
           <div className="border-l-4 border-slate-900 dark:border-sky-400/50 mx-4"></div>
@@ -78,7 +80,7 @@ function Contact() {
             className="flex flex-col items-center bg-sky-100 dark:bg-slate-700/50 hover:bg-sky-200 dark:hover:bg-sky-800/50 transition-colors duration-300 rounded-md py-5 px-5 my-5 w-[50%] space-y-3 shadow-lg"
           >
             <IoMdMail className="text-sky-400 text-3xl" />
-            <p className="text-center text-slate-900 dark:text-sky-200 text-sm md:text-base lg:text-lg">
+            <p className="text-center text-slate-900 dark:text-sky-200 text-xs phone:text-base md:text-lg">
               virtudazoy@gmail.com
             </p>
           </a>

@@ -109,7 +109,7 @@ const Navbar = ({ activeSection, toggleDarkMode, darkMode }) => {
             : "duration-100 -translate-y-full"
         }`}
       >
-        <div className="bg-blue-50 dark:bg-slate-800 flex flex-col h-full w-full p-2 fade-down border-b-4">
+        <div className="bg-blue-50 dark:bg-slate-800 flex flex-col h-full w-full p-1 fade-down border-b-4 dark:border-b-2 dark:border-sky-700/50">
           <div className="flex flex-row items-center justify-center w-full text-slate-900 dark:text-sky-50">
             <a
               href="#home"
@@ -126,7 +126,7 @@ const Navbar = ({ activeSection, toggleDarkMode, darkMode }) => {
                 activeSection === "about" ? "text-sky-500 active" : ""
               }`}
             >
-              <IoPersonCircleSharp className="text-[35px]" />
+              <IoPersonCircleSharp className="text-[33px]" />
             </a>
 
             <a
@@ -135,7 +135,7 @@ const Navbar = ({ activeSection, toggleDarkMode, darkMode }) => {
                 activeSection === "experience" ? "text-sky-500 active" : ""
               }`}
             >
-              <BsPersonWorkspace className="p-1 text-[39px]" />
+              <BsPersonWorkspace className="p-1 text-[35px]" />
             </a>
 
             <a
@@ -144,7 +144,7 @@ const Navbar = ({ activeSection, toggleDarkMode, darkMode }) => {
                 activeSection === "projects" ? "text-sky-500 active" : ""
               }`}
             >
-              <PiStackSimpleFill className="text-[38px]" />
+              <PiStackSimpleFill className="text-[35px]" />
             </a>
 
             <a
@@ -153,12 +153,12 @@ const Navbar = ({ activeSection, toggleDarkMode, darkMode }) => {
                 activeSection === "contact" ? "text-sky-500 active" : ""
               }`}
             >
-              <GrContact className="p-1 text-[38px]" />
+              <GrContact className="p-1 text-[35px]" />
             </a>
 
             <button
               onClick={toggleDarkMode}
-              className="flex-1 flex justify-center p-1 bg-sky-400 active:bg-sky-300 rounded-full text-slate-900 text-[35px]"
+              className="flex-1 flex justify-center p-1 bg-sky-400 active:bg-sky-300 rounded-full text-slate-900 text-[33px]"
             >
               {darkMode ? <MdLightMode /> : <MdDarkMode />}
             </button>
