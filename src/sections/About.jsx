@@ -52,12 +52,12 @@ function About() {
       {/* Figure Section */}
       <figure
         ref={figureRef}
-        className={`flex flex-col-reverse tablet:flex-row items-center justify-center tablet:space-x-5 bg-slate-900/5 dark:bg-sky-900/15 p-5 tablet:p-12 rounded-lg shadow-md ${
+        className={`flex flex-col-reverse tablet:flex-row items-center justify-center tablet:space-x-5 bg-slate-900/5 dark:bg-sky-900/15 p-5 tablet:p-12 rounded-lg shadow-lg dark:shadow-sky-400 ${
           isInViewFigure ? "bg-anim" : "opacity-0"
         }`}
       >
         <div
-          className={`flex flex-col justify-between space-y-4 bg-sky-100 dark:bg-slate-700/50 p-3 shadow-lg rounded-lg ${
+          className={`flex flex-col justify-between space-y-4 bg-sky-100 dark:bg-slate-700/50 p-2 pb-3 tablet:p-3 shadow-lg dark:shadow-md dark:shadow-sky-400 rounded-lg ${
             isInViewFigure ? "box-anim1" : "opacity-0"
           }`}
         >
@@ -87,7 +87,7 @@ function About() {
             ))}
           </div>
 
-          <div className="flex items-center justify-start space-x-3 text-sky-400">
+          <div className="flex items-center justify-start space-x-3 text-sky-400 ml-1">
             <a
               href="#contact"
               className="flex items-center justify-center py-1 tablet:py-3 px-2 tablet:pl-4 tablet:pr-3 active:bg-slate-900/5 dark:active:bg-sky-400/20 tablet:hover:bg-slate-900/50 dark:tablet:hover:bg-sky-400/20 tablet:active:scale-[0.90] rounded-md w-fit duration-100 ease-in-out"
@@ -118,7 +118,7 @@ function About() {
       {/* Tech Stack Section */}
       <div
         ref={techStackRef}
-        className={`flex flex-col space-y-5 bg-slate-900/5 dark:dark:bg-sky-900/15 p-5 tablet:px-12 tablet:pt-10 tablet:pb-12 rounded-lg shadow-md transition-opacity duration-700 ${
+        className={`flex flex-col space-y-5 bg-slate-900/5 dark:dark:bg-sky-900/15 p-5 tablet:px-12 tablet:pt-10 tablet:pb-12 rounded-lg shadow-lg dark:shadow-sky-400 transition-opacity duration-700 ${
           isInViewTechStack ? "bg-anim" : "opacity-0"
         }`}
       >
@@ -137,7 +137,7 @@ function About() {
         <div className="flex flex-col tablet:flex-row gap-y-5 justify-center gap-x-5">
           {/* Frontend Box */}
           <div
-            className={`flex flex-col items-center bg-sky-100 dark:bg-slate-700/50 shadow-lg rounded-lg tablet:w-[50%] space-y-7 p-3 ${
+            className={`flex flex-col items-center bg-sky-100 dark:bg-slate-700/50 shadow-md dark:shadow-sky-400 rounded-lg tablet:w-[50%] space-y-7 p-2 ${
               isInViewTechStack ? "box-anim1" : "opacity-0"
             }`}
           >
@@ -169,7 +169,7 @@ function About() {
 
           {/* Backend Box */}
           <div
-            className={`flex flex-col items-center bg-sky-100 dark:bg-slate-700/50 shadow-lg rounded-lg tablet:w-[50%] space-y-7 p-3 ${
+            className={`flex flex-col items-center bg-sky-100 dark:bg-slate-700/50 shadow-md dark:shadow-sky-400 rounded-lg tablet:w-[50%] space-y-7 p-2 ${
               isInViewTechStack ? "box-anim1" : "opacity-0"
             }`}
           >

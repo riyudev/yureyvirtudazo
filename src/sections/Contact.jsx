@@ -3,17 +3,19 @@ import emailjs from "@emailjs/browser";
 import { IoMdMail } from "react-icons/io";
 import { BsFillRocketTakeoffFill } from "react-icons/bs";
 import { MdPermPhoneMsg } from "react-icons/md";
+import { FaCircleCheck } from "react-icons/fa6";
 import useInView from "../helpers/useInView";
 import "../styles/Animation.css";
 
 function Contact() {
   const form = useRef();
   const [alertVisible, setAlertVisible] = useState(false);
-
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [isInViewHeader, headerRef] = useInView();
 
   const sendEmail = (e) => {
     e.preventDefault();
+    setIsSubmitting(true); // Start showing cursor-wait
 
     emailjs
       .sendForm("service_824ppps", "template_x3tidwu", form.current, {
@@ -21,21 +23,17 @@ function Contact() {
       })
       .then(
         () => {
-          console.log("SUCCESS!");
-          console.log("message sent");
-          setAlertVisible(true); // Show alert
-          setTimeout(() => {
-            setAlertVisible(false); // Hide alert after 3 seconds
-          }, 3000);
+          setAlertVisible(true);
+          setIsSubmitting(false); // Stop showing cursor-wait
+          setTimeout(() => setAlertVisible(false), 3000); // Hide alert after 3 seconds
         },
         (error) => {
           console.log("FAILED...", error.text);
+          setIsSubmitting(false); // Stop showing cursor-wait on error
         }
       );
-    console.log("Form submitted!");
 
-    // Reset the form fields
-    form.current.reset();
+    form.current.reset(); // Reset form fields
   };
 
   return (
@@ -46,7 +44,7 @@ function Contact() {
         isInViewHeader
           ? "flex flex-col gap-y-9 tablet:flex-row items-center justify-center pt-20 gap-x-8 w-full bg-anim"
           : "invisible"
-      } `}
+      } ${isSubmitting ? "cursor-wait" : ""}`}
     >
       <div className="w-full tablet:max-w-lg space-y-7 px-2 place-items-center tablet:place-items-start">
         <header className="flex flex-col max-w-md w-full justify-center items-center tablet:items-start">
@@ -92,7 +90,7 @@ function Contact() {
         method="POST"
         ref={form}
         onSubmit={sendEmail}
-        className="w-full max-w-lg p-6 bg-slate-900/5 dark:bg-sky-900/15 rounded-lg shadow-md space-y-4"
+        className="w-full max-w-lg p-6 bg-slate-900/5 dark:bg-sky-900/15 rounded-lg shadow-md dark:shadow-sky-400 space-y-4"
       >
         <h1 className="flex items-center justify-center font-poppinsBold text-3xl text-slate-900 dark:text-sky-400 mb-10">
           Message Me
@@ -158,10 +156,15 @@ function Contact() {
         </div>
       </form>
 
-      {/* Alert message */}
+      {/**/}
       {alertVisible && (
-        <div className="fixed bottom-[50%] right-4 bg-sky-400 text-white py-2 px-4 rounded shadow-lg">
-          Message sent!
+        <div className="fixed top-20 bg-sky-400 text-white p-5 rounded shadow-lg z-50 alert-slide-down">
+          <div className="flex items-center justify-center space-x-2">
+            <p className="text-xl font-poppinsBold whitespace-nowrap">
+              Message sent!
+            </p>
+            <FaCircleCheck className="text-xl" />
+          </div>
         </div>
       )}
     </section>

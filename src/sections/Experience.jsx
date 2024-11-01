@@ -47,13 +47,13 @@ function Experience() {
 
       <figure
         ref={figureRef}
-        className={`flex flex-col tablet:flex-row gap-y-4 tablet:space-x-5 bg-slate-900/5 dark:bg-sky-900/15 p-5 tablet:p-12 rounded-lg shadow-md ${
+        className={`flex flex-col tablet:flex-row gap-y-4 tablet:space-x-5 bg-slate-900/5 dark:bg-sky-900/15 p-5 tablet:p-12 rounded-lg shadow-lg dark:shadow-sky-400 ${
           isInViewFigure ? "bg-anim" : "opacity-0"
         } `}
       >
         {/*1st div wrapper*/}
         <div
-          className={`flex flex-col justify-center items-center tablet:items-start bg-sky-100 dark:bg-slate-700/50 p-4 shadow-lg rounded-lg ${
+          className={`flex flex-col justify-center items-center tablet:items-start bg-sky-100 dark:bg-slate-700/50 p-4 shadow-md dark:shadow-sky-400 rounded-lg ${
             isInViewFigure ? "box-anim1" : "opacity-0"
           } `}
         >
@@ -83,7 +83,7 @@ function Experience() {
 
         {/*2nd div wrapper*/}
         <div
-          className={`flex flex-col justify-between space-y-4 bg-sky-100 dark:bg-slate-700/50 p-3 shadow-lg rounded-lg ${
+          className={`flex flex-col justify-between space-y-4 bg-sky-100 dark:bg-slate-700/50 p-2 pb-3 tablet:p-3 shadow-md dark:shadow-sky-400 rounded-lg ${
             isInViewFigure ? "box-anim1" : "opacity-0"
           } `}
         >

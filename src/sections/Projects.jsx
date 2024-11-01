@@ -8,7 +8,7 @@ import "../styles/Animation.css";
 function ProjectItem({ title, description, techStack, animationClass }) {
   return (
     <div
-      className={`bg-sky-100 dark:bg-slate-700/50 p-5 space-y-4 shadow-lg rounded-lg flex flex-col h-full ${animationClass}`}
+      className={`bg-sky-100 dark:bg-slate-700/50 p-4 tablet:p-5 space-y-4 shadow-md dark:shadow-sky-400 rounded-lg flex flex-col h-full ${animationClass}`}
     >
       <h2 className="font-montserratBold text-2xl text-slate-900 dark:text-sky-400">
         {title}
@@ -27,8 +27,10 @@ function ProjectItem({ title, description, techStack, animationClass }) {
         ))}
       </div>
       <div className="mt-auto">
-        <button className="flex items-center px-4 py-2 active:bg-slate-900/50 tablet:hover:bg-slate-900/50 dark:tablet:hover:bg-sky-400/20 tablet:active:scale-[0.90] rounded-md w-fit duration-100 ease-in-out">
-          <p className="text-sky-400 font-poppinsRegular">VIEW SOURCE</p>
+        <button className="flex items-center px-4 py-2 active:bg-sky-400/20 tablet:hover:bg-slate-900/50 dark:tablet:hover:bg-sky-400/20 tablet:active:scale-[0.90] rounded-md w-fit duration-100 ease-in-out">
+          <p className="text-sky-400 font-poppinsRegular text-sm">
+            VIEW SOURCE
+          </p>
           <TbBrandGithubFilled className="ml-3 text-2xl text-sky-400" />
         </button>
       </div>
@@ -108,7 +110,7 @@ function Projects() {
 
       <figure
         ref={figureRef}
-        className={`grid grid-cols-1 phone:grid-cols-2 tablet:grid-cols-3 gap-10 bg-slate-900/5 dark:bg-sky-900/15 p-5 shadow-md ${
+        className={`grid grid-cols-1 phone:grid-cols-2 tablet:grid-cols-3 gap-10 bg-slate-900/5 dark:bg-sky-900/15 p-5 tablet:p-12 shadow-lg dark:shadow-sky-400 ${
           isInViewFigure ? "bg-anim" : "opacity-0"
         }`}
       >
