@@ -35,7 +35,7 @@ function Footer() {
             <FaLinkedinIn style={{ fontSize: iconSize }} />
           </a>
 
-          <a>
+          <a href="https://github.com/riyudev" target="_blank">
             <TbBrandGithubFilled style={{ fontSize: iconSize }} />
           </a>
 

@@ -29,12 +29,26 @@ function ProjectItem({ title, description, techStack, animationClass }) {
       </div>
       <div className="flex justify-between mt-auto">
         {/* VIEW SOURCE Button */}
-        <button className="flex items-center px-4 py-2 active:bg-sky-400/20 tablet:hover:bg-slate-900/50 dark:tablet:hover:bg-sky-400/20 tablet:active:scale-[0.90] rounded-md w-fit duration-100 ease-in-out">
-          <p className="text-sky-400 font-poppinsBold text-sm tracking-widest">
-            VIEW SOURCE
-          </p>
-          <TbBrandGithubFilled className="ml-3 text-xl text-sky-400" />
-        </button>
+        {title === "Movie App" ? (
+          <a
+            href="https://github.com/riyudev/movie-app"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center px-4 py-2 active:bg-sky-400/20 tablet:hover:bg-slate-900/50 dark:tablet:hover:bg-sky-400/20 tablet:active:scale-[0.90] rounded-md w-fit duration-100 ease-in-out"
+          >
+            <p className="text-sky-400 font-poppinsBold text-sm tracking-widest">
+              VIEW SOURCE
+            </p>
+            <TbBrandGithubFilled className="ml-3 text-xl text-sky-400" />
+          </a>
+        ) : (
+          <button className="flex items-center px-4 py-2 active:bg-sky-400/20 tablet:hover:bg-slate-900/50 dark:tablet:hover:bg-sky-400/20 tablet:active:scale-[0.90] rounded-md w-fit duration-100 ease-in-out">
+            <p className="text-sky-400 font-poppinsBold text-sm tracking-widest">
+              VISIT
+            </p>
+            <TbBrandGithubFilled className="ml-3 text-xl text-sky-400" />
+          </button>
+        )}
 
         {/* VISIT Button */}
         {title === "Movie App" ? (

@@ -73,7 +73,11 @@ const Home = () => {
               <FaXTwitter className="text-slate-900 text-lg tablet:text-2xl" />
             </a>
 
-            <a className="bg-sky-400 p-3 rounded-full hover:scale-[1.15] active:scale-[0.95] hover:opacity-75 duration-200 ease-in-out border-2 border-slate-900 dark:border-sky-50">
+            <a
+              href="https://github.com/riyudev"
+              target="_blank"
+              className="bg-sky-400 p-3 rounded-full hover:scale-[1.15] active:scale-[0.95] hover:opacity-75 duration-200 ease-in-out border-2 border-slate-900 dark:border-sky-50"
+            >
               <FaGithub className="text-slate-900 text-lg tablet:text-2xl" />
             </a>
           </div>
