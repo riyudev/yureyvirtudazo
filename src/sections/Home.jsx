@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Profile from "../assets/Muzan.jpg";
+import Profile from "../assets/mypicture.jpg";
 import { FaFacebookF, FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import Typewriter from "../components/Typewriter";
@@ -20,7 +20,7 @@ const Home = () => {
       className="flex tablet:flex-row flex-col justify-center items-center min-h-screen h-fit space-y-9 tablet:space-y-0 tablet:space-x-10 bg-transparent z-auto scroll-py-6 tablet:scroll-py-0"
     >
       <div
-        className={`w-fit tablet:max-w-96 max-w-40 flex justify-center ${profileAnimation}`}
+        className={`w-fit tablet:max-w-80 max-w-40 flex justify-center ${profileAnimation}`}
       >
         <img className="rounded-full" src={Profile} alt="Profile" />
       </div>

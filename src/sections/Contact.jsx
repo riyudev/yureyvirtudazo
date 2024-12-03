@@ -15,7 +15,7 @@ function Contact() {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    setIsSubmitting(true); // Start showing cursor-wait
+    setIsSubmitting(true);
 
     emailjs
       .sendForm("service_824ppps", "template_x3tidwu", form.current, {
@@ -24,16 +24,16 @@ function Contact() {
       .then(
         () => {
           setAlertVisible(true);
-          setIsSubmitting(false); // Stop showing cursor-wait
-          setTimeout(() => setAlertVisible(false), 3000); // Hide alert after 3 seconds
+          setIsSubmitting(false);
+          setTimeout(() => setAlertVisible(false), 3000);
         },
         (error) => {
           console.log("FAILED...", error.text);
-          setIsSubmitting(false); // Stop showing cursor-wait on error
+          setIsSubmitting(false);
         }
       );
 
-    form.current.reset(); // Reset form fields
+    form.current.reset();
   };
 
   return (

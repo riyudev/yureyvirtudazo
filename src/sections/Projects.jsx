@@ -1,5 +1,6 @@
 import React from "react";
 import { TbBrandGithubFilled } from "react-icons/tb";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import useInView from "../helpers/useInView";
 import useWindowWidth from "../helpers/useWindowWidth";
 import "../styles/Animation.css";
@@ -26,13 +27,36 @@ function ProjectItem({ title, description, techStack, animationClass }) {
           </p>
         ))}
       </div>
-      <div className="mt-auto">
+      <div className="flex justify-between mt-auto">
+        {/* VIEW SOURCE Button */}
         <button className="flex items-center px-4 py-2 active:bg-sky-400/20 tablet:hover:bg-slate-900/50 dark:tablet:hover:bg-sky-400/20 tablet:active:scale-[0.90] rounded-md w-fit duration-100 ease-in-out">
-          <p className="text-sky-400 font-poppinsRegular text-sm">
+          <p className="text-sky-400 font-poppinsBold text-sm tracking-widest">
             VIEW SOURCE
           </p>
-          <TbBrandGithubFilled className="ml-3 text-2xl text-sky-400" />
+          <TbBrandGithubFilled className="ml-3 text-xl text-sky-400" />
         </button>
+
+        {/* VISIT Button */}
+        {title === "Movie App" ? (
+          <a
+            href="https://movie-app-yurcodes.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center px-4 py-2 active:bg-sky-400/20 tablet:hover:bg-slate-900/50 dark:tablet:hover:bg-sky-400/20 tablet:active:scale-[0.90] rounded-md w-fit duration-100 ease-in-out"
+          >
+            <p className="text-sky-400 font-poppinsBold text-sm tracking-widest">
+              VISIT
+            </p>
+            <ArrowForwardIcon className="ml-3 text-xl text-sky-400" />
+          </a>
+        ) : (
+          <button className="flex items-center px-4 py-2 active:bg-sky-400/20 tablet:hover:bg-slate-900/50 dark:tablet:hover:bg-sky-400/20 tablet:active:scale-[0.90] rounded-md w-fit duration-100 ease-in-out">
+            <p className="text-sky-400 font-poppinsBold text-sm tracking-widest">
+              VISIT
+            </p>
+            <ArrowForwardIcon className="ml-3 text-xl text-sky-400" />
+          </button>
+        )}
       </div>
     </div>
   );
@@ -47,32 +71,44 @@ function Projects() {
 
   const projectData = [
     {
-      title: "Booking System",
+      title: "Movie App",
+      description:
+        "A simple netflix clone with user login authentication, home page and player page.",
       techStack: ["javascript", "reactjs", "tailwindcss", "nodejs", "mongodb"],
       animationClass: "box-anim1",
     },
     {
       title: "E-commerce App",
+      description:
+        "A fully responsive online shopping platform with product listings, user login, and payment integration.",
       techStack: ["javascript", "reactjs", "tailwindcss", "mysql"],
       animationClass: "box-anim2",
     },
     {
       title: "Chat Application",
+      description:
+        "A real-time chat application with WebSocket integration, multiple chat rooms, and user authentication.",
       techStack: ["javascript", "reactjs", "tailwindcss", "nodejs"],
       animationClass: "box-anim3",
     },
     {
       title: "Weather App",
+      description:
+        "A weather forecasting app displaying real-time weather data for any location using a public API.",
       techStack: ["javascript", "reactjs", "tailwindcss"],
       animationClass: "box-anim4",
     },
     {
       title: "Task Management App",
+      description:
+        "A productivity tool for creating, managing, and tracking tasks with drag-and-drop functionality.",
       techStack: ["javascript", "reactjs", "tailwindcss"],
       animationClass: "box-anim5",
     },
     {
       title: "Quiz App",
+      description:
+        "An interactive quiz application with customizable categories, timer-based gameplay, and score tracking.",
       techStack: ["javascript", "reactjs", "tailwindcss"],
       animationClass: "box-anim6",
     },
@@ -114,15 +150,17 @@ function Projects() {
           isInViewFigure ? "bg-anim" : "opacity-0"
         }`}
       >
-        {projectData.map(({ title, techStack, animationClass }) => (
-          <ProjectItem
-            key={title}
-            title={title}
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non est euismod, faucibus justo sit amet, semper est. Curabitur maximus posuere orci vel auctor."
-            techStack={techStack}
-            animationClass={isInViewFigure ? animationClass : "opacity-0"}
-          />
-        ))}
+        {projectData.map(
+          ({ title, description, techStack, animationClass }) => (
+            <ProjectItem
+              key={title}
+              title={title}
+              description={description}
+              techStack={techStack}
+              animationClass={isInViewFigure ? animationClass : "opacity-0"}
+            />
+          )
+        )}
       </figure>
     </section>
   );

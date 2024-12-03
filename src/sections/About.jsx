@@ -2,7 +2,7 @@ import React from "react";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import StarIcon from "@mui/icons-material/Star";
 import StackIcon from "tech-stack-icons";
-import Banner from "../assets/muz.jpg";
+import Banner from "../assets/yureyface.jpg";
 import useInView from "../helpers/useInView";
 import useWindowWidth from "../helpers/useWindowWidth";
 import "../styles/Animation.css";
