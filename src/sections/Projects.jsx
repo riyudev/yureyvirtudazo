@@ -44,7 +44,7 @@ function ProjectItem({ title, description, techStack, animationClass }) {
         ) : (
           <button className="flex items-center px-4 py-2 active:bg-sky-400/20 tablet:hover:bg-slate-900/50 dark:tablet:hover:bg-sky-400/20 tablet:active:scale-[0.90] rounded-md w-fit duration-100 ease-in-out">
             <p className="text-sky-400 font-poppinsBold text-sm tracking-widest">
-              VISIT
+              VIEW SOURCE
             </p>
             <TbBrandGithubFilled className="ml-3 text-xl text-sky-400" />
           </button>
