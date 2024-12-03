@@ -88,7 +88,13 @@ function Projects() {
       title: "Movie App",
       description:
         "A simple netflix clone with user login authentication, home page and player page.",
-      techStack: ["javascript", "reactjs", "tailwindcss", "nodejs", "mongodb"],
+      techStack: [
+        "javascript",
+        "reactjs",
+        "tailwindcss",
+        "tmdbAPI",
+        "firebase",
+      ],
       animationClass: "box-anim1",
     },
     {
