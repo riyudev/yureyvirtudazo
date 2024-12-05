@@ -63,7 +63,7 @@ function About() {
         >
           <blockquote className="text-justify p-2">
             <p className="font-poppinsRegular text-sky-950 dark:text-sky-200">
-              Hi! I'm <b>Yurey</b>, a passionate 2nd-year college student with a
+              Hi! I'm <b>Yurey</b>, a passionate junior web developer with a
               love for programming and building web applications. Ever since I
               started coding, I've been fascinated by the power of technology to
               create meaningful solutions and improve everyday life. I'm always
