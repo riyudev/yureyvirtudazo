@@ -91,12 +91,12 @@ function Experience() {
             <p className="font-poppinsRegular text-slate-900 dark:text-sky-200">
               I had the opportunity to craft tailored church websites and update
               plugins for over 400 sites during my time at REACHRIGHT. Despite
-              being a 1st-year student, I handled significant responsibilities,
-              working under someone else's name as an outsourced developer. I
-              worked full-time (Mon-Fri, 8 hours night-shift) for six months,
-              troubleshooting client websites when requested by the Project
-              Manager, and optimizing responsive websites to enhance user
-              experience.
+              being a first timer in this field, I handled significant
+              responsibilities, working under someone else's name as an
+              outsourced developer. I worked full-time (Mon-Fri, 8 hours
+              night-shift) for six months, troubleshooting client websites when
+              requested by the Project Manager, and optimizing responsive
+              websites to enhance user experience.
             </p>
           </blockquote>
 

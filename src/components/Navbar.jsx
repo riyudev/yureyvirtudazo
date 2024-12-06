@@ -42,7 +42,7 @@ const Navbar = ({ activeSection, toggleDarkMode, darkMode }) => {
           }`}
         >
           <h1 className="text-lg text-slate-900 dark:text-sky-50 font-montserratBold fade-down">
-            <a href="/">@YureyVirtudazo</a>
+            <a href="/">@YureyVirtudazo🇵🇭</a>
           </h1>
 
           <div className="flex-end ml-auto space-x-3 font-montserratBold fade-nav text-slate-900 dark:text-sky-50">
