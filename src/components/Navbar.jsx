@@ -4,6 +4,7 @@ import { IoPersonCircleSharp } from "react-icons/io5";
 import { BsPersonWorkspace } from "react-icons/bs";
 import { PiStackSimpleFill } from "react-icons/pi";
 import { GrContact } from "react-icons/gr";
+import flag from "../assets/flagph.png";
 import "../styles/Navbar.css";
 
 const Navbar = ({ activeSection, toggleDarkMode, darkMode }) => {
@@ -41,9 +42,12 @@ const Navbar = ({ activeSection, toggleDarkMode, darkMode }) => {
             isScrolled ? "py-4 px-5" : "py-6 px-5"
           }`}
         >
-          <h1 className="text-lg text-slate-900 dark:text-sky-50 font-montserratBold fade-down">
-            <a href="/">@YureyVirtudazo🇵🇭</a>
-          </h1>
+          <div className="flex space-x-1 items-center fade-down">
+            <h1 className="text-lg text-slate-900 dark:text-sky-50 font-montserratBold">
+              <a href="/">@YureyVirtudazo</a>
+            </h1>
+            <img src={flag} alt="PH" className="size-5" />
+          </div>
 
           <div className="flex-end ml-auto space-x-3 font-montserratBold fade-nav text-slate-900 dark:text-sky-50">
             <a
@@ -56,12 +60,12 @@ const Navbar = ({ activeSection, toggleDarkMode, darkMode }) => {
             </a>
 
             <a
-              href="#about"
+              href="#projects"
               className={`hover:text-sky-500 underline-animation p-2 ${
-                activeSection === "about" ? "text-sky-500 active" : ""
+                activeSection === "projects" ? "text-sky-500 active" : ""
               }`}
             >
-              About
+              Projects
             </a>
 
             <a
@@ -74,12 +78,12 @@ const Navbar = ({ activeSection, toggleDarkMode, darkMode }) => {
             </a>
 
             <a
-              href="#projects"
+              href="#about"
               className={`hover:text-sky-500 underline-animation p-2 ${
-                activeSection === "projects" ? "text-sky-500 active" : ""
+                activeSection === "about" ? "text-sky-500 active" : ""
               }`}
             >
-              Projects
+              About
             </a>
 
             <a
@@ -121,30 +125,30 @@ const Navbar = ({ activeSection, toggleDarkMode, darkMode }) => {
             </a>
 
             <a
+              href="#projects"
+              className={`flex-1 flex justify-center underline-animation p-1 ${
+                activeSection === "projects" ? "text-sky-500 active" : ""
+              }`}
+            >
+              <a
+                href="#experience"
+                className={`flex-1 flex justify-center underline-animation p-1 ${
+                  activeSection === "experience" ? "text-sky-500 active" : ""
+                }`}
+              >
+                <BsPersonWorkspace className="p-1 text-[35px]" />
+              </a>
+
+              <PiStackSimpleFill className="text-[35px]" />
+            </a>
+
+            <a
               href="#about"
               className={`flex-1 flex justify-center underline-animation p-1 ${
                 activeSection === "about" ? "text-sky-500 active" : ""
               }`}
             >
               <IoPersonCircleSharp className="text-[33px]" />
-            </a>
-
-            <a
-              href="#experience"
-              className={`flex-1 flex justify-center underline-animation p-1 ${
-                activeSection === "experience" ? "text-sky-500 active" : ""
-              }`}
-            >
-              <BsPersonWorkspace className="p-1 text-[35px]" />
-            </a>
-
-            <a
-              href="#projects"
-              className={`flex-1 flex justify-center underline-animation p-1 ${
-                activeSection === "projects" ? "text-sky-500 active" : ""
-              }`}
-            >
-              <PiStackSimpleFill className="text-[35px]" />
             </a>
 
             <a

@@ -62,9 +62,9 @@ function App() {
         />
         <div className="max-w-7xl w-full px-4 tablet:px-5 space-y-20">
           <Home />
-          <About />
-          <Experience />
           <Projects />
+          <Experience />
+          <About />
           <Contact />
         </div>
         <Footer />
