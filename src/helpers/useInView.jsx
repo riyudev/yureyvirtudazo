@@ -11,8 +11,8 @@ const useInView = (threshold = 0.1, rootMargin = "0px 0px -10% 0px") => {
         const entry = entries[0];
         if (entry.isIntersecting && !hasAnimated) {
           setIsInView(true);
-          setHasAnimated(true); // Mark as completed
-          observer.disconnect(); // Stop observing once animation completes
+          setHasAnimated(true);
+          observer.disconnect();
         }
       },
       { threshold, rootMargin }

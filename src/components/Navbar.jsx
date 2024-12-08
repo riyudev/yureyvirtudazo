@@ -60,12 +60,12 @@ const Navbar = ({ activeSection, toggleDarkMode, darkMode }) => {
             </a>
 
             <a
-              href="#projects"
+              href="#about"
               className={`hover:text-sky-500 underline-animation p-2 ${
-                activeSection === "projects" ? "text-sky-500 active" : ""
+                activeSection === "about" ? "text-sky-500 active" : ""
               }`}
             >
-              Projects
+              About
             </a>
 
             <a
@@ -78,12 +78,12 @@ const Navbar = ({ activeSection, toggleDarkMode, darkMode }) => {
             </a>
 
             <a
-              href="#about"
+              href="#projects"
               className={`hover:text-sky-500 underline-animation p-2 ${
-                activeSection === "about" ? "text-sky-500 active" : ""
+                activeSection === "projects" ? "text-sky-500 active" : ""
               }`}
             >
-              About
+              Projects
             </a>
 
             <a
@@ -125,30 +125,30 @@ const Navbar = ({ activeSection, toggleDarkMode, darkMode }) => {
             </a>
 
             <a
-              href="#projects"
-              className={`flex-1 flex justify-center underline-animation p-1 ${
-                activeSection === "projects" ? "text-sky-500 active" : ""
-              }`}
-            >
-              <a
-                href="#experience"
-                className={`flex-1 flex justify-center underline-animation p-1 ${
-                  activeSection === "experience" ? "text-sky-500 active" : ""
-                }`}
-              >
-                <BsPersonWorkspace className="p-1 text-[35px]" />
-              </a>
-
-              <PiStackSimpleFill className="text-[35px]" />
-            </a>
-
-            <a
               href="#about"
               className={`flex-1 flex justify-center underline-animation p-1 ${
                 activeSection === "about" ? "text-sky-500 active" : ""
               }`}
             >
               <IoPersonCircleSharp className="text-[33px]" />
+            </a>
+
+            <a
+              href="#experience"
+              className={`flex-1 flex justify-center underline-animation p-1 ${
+                activeSection === "experience" ? "text-sky-500 active" : ""
+              }`}
+            >
+              <BsPersonWorkspace className="p-1 text-[35px]" />
+            </a>
+
+            <a
+              href="#projects"
+              className={`flex-1 flex justify-center underline-animation p-1 ${
+                activeSection === "projects" ? "text-sky-500 active" : ""
+              }`}
+            >
+              <PiStackSimpleFill className="text-[35px]" />
             </a>
 
             <a

@@ -16,7 +16,7 @@ function App() {
 
   const toggleDarkMode = () => {
     setDarkMode((prevMode) => {
-      localStorage.setItem("darkMode", !prevMode); // Save updated mode to localStorage
+      localStorage.setItem("darkMode", !prevMode);
       return !prevMode;
     });
   };
@@ -58,13 +58,13 @@ function App() {
         <Navbar
           activeSection={activeSection}
           darkMode={darkMode}
-          toggleDarkMode={toggleDarkMode} // Pass toggle function to Navbar
+          toggleDarkMode={toggleDarkMode}
         />
         <div className="max-w-7xl w-full px-4 tablet:px-5 space-y-20">
           <Home />
-          <Projects />
-          <Experience />
           <About />
+          <Experience />
+          <Projects />
           <Contact />
         </div>
         <Footer />
