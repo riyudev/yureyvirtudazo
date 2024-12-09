@@ -57,7 +57,7 @@ function About() {
         }`}
       >
         <div
-          className={`flex flex-col justify-between space-y-4 bg-sky-100 dark:bg-slate-700/50 p-2 pb-3 tablet:p-3 shadow-lg dark:shadow-md dark:shadow-sky-400 rounded-lg ${
+          className={`flex flex-col justify-between space-y-4 bg-sky-100 dark:bg-slate-700/50 p-2 pb-3 tablet:p-3 shadow-md dark:shadow-md dark:shadow-sky-400 rounded-lg ${
             isInViewFigure ? "box-anim1" : "opacity-0"
           }`}
         >
@@ -72,6 +72,7 @@ function About() {
               tools in web development.
             </p>
           </blockquote>
+
           <div className="flex flex-wrap font-mono text-sky-50 dark:text-slate-900 text-sm">
             {[
               "$collaborative_development",
@@ -102,6 +103,7 @@ function About() {
             </a>
           </div>
         </div>
+
         <div
           className={`flex items-center justify-center max-w-sm tablet:max-w-md w-fit mb-5 tablet:mb-0 ${
             isInViewFigure ? "box-anim1" : "opacity-0"

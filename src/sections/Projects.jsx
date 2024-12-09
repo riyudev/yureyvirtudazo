@@ -38,7 +38,7 @@ function Projects() {
             isInViewHeader ? `${subHead}` : "opacity-0"
           }`}
         >
-          My recent works
+          My personal projects
         </p>
       </header>
 
