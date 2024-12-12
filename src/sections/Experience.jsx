@@ -78,7 +78,7 @@ function Experience() {
               at REACHRIGHT
             </p>
             <p className="font-poppinsRegular text-xs text-slate-900 dark:text-sky-200">
-              6 months - 2023 ~ fulltime
+              1 year - 2023-2024 ~ fulltime
             </p>
           </div>
         </div>
@@ -96,7 +96,7 @@ function Experience() {
               being a first timer in this field, I handled significant
               responsibilities, working under someone else's name as an
               outsourced developer. I worked full-time (Mon-Fri, 8 hours
-              night-shift) for six months, troubleshooting client websites when
+              night-shift) for a year, troubleshooting client websites when
               requested by the Project Manager, and optimizing responsive
               websites to enhance user experience.
             </p>
