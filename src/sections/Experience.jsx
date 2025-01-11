@@ -5,6 +5,7 @@ import useInView from "../helpers/useInView";
 import useWindowWidth from "../helpers/useWindowWidth";
 import Salem from "../assets/salem.jpg";
 import Gateway from "../assets/gateway.jpg";
+import Encounter from "../assets/encounter.jpg";
 import "../styles/Animation.css";
 
 function Experience() {
@@ -220,6 +221,45 @@ function Experience() {
                 />
               </a>
             </blockquote>
+          </div>
+
+          {/**third sample work - ENCOUNTER CHURCH */}
+          <div
+            className={`flex flex-col-reverse tablet:flex-row justify-center items-center tablet:space-x-5 ${
+              isInViewSample ? "box-anim1" : "opacity-0"
+            }`}
+          >
+            <blockquote className="p-4 bg-sky-100 dark:bg-slate-700/50 shadow-md dark:shadow-md dark:shadow-sky-400 rounded-lg">
+              <h2 className="font-poppinsBold text-2xl text-slate-900 dark:text-sky-400 mb-4">
+                Encounter Church
+              </h2>
+              <p className="text-justify dark:text-sky-200 font-poppinsRegular mb-7">
+                Encounter Church is a faith-driven platform dedicated to guiding
+                members on their spiritual journey. As a web developer, I
+                designed a responsive and intuitive interface that embodies the
+                church's warm and inviting spirit. The platform provides key
+                information about worship services, community gatherings, and
+                volunteer opportunities, encouraging stronger connections and
+                active participation within the congregation.
+              </p>
+              <a
+                href="https://yourencounter.com/"
+                target="_blank"
+                className="flex items-center justify-center py-1 tablet:py-3 px-2 tablet:pl-4 tablet:pr-3 active:bg-slate-900/5 dark:active:bg-sky-400/20 tablet:hover:bg-slate-900/50 dark:tablet:hover:bg-sky-400/20 tablet:active:scale-[0.90] rounded-md w-fit duration-100 ease-in-out text-sky-400"
+              >
+                <p className="tablet:pt-[2px] text-sm font-poppinsBold tracking-widest">
+                  VISIT
+                </p>
+                <ArrowForwardIcon
+                  className="ml-2"
+                  style={{ fontSize: "20px" }}
+                />
+              </a>
+            </blockquote>
+
+            <div className="flex items-center justify-center max-w-sm tablet:max-w-md w-fit mb-5 tablet:mb-0">
+              <img src={Encounter} alt="" className="md:max-w-md rounded-lg" />
+            </div>
           </div>
         </div>
       </sample>
