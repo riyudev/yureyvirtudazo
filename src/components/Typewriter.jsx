@@ -15,8 +15,12 @@ const Typewriter = () => {
         setTimeout(type, typingSpeed);
       }
     };
-    type();
+
+    const delayTimer = setTimeout(type, 900);
+
+    return () => clearTimeout(delayTimer);
   }, []);
+
   return (
     <p
       className="font-mono font-semibold text-2xl md:text-3xl text-slate-900 dark:text-sky-50 text-center md:text-start"
