@@ -34,7 +34,7 @@
 @keyframes slide-right {
   from {
     opacity: 0;
-    transform: translateX(-100px); /* Move from the left */
+    transform: translateX(-100px);
   }
   to {
     opacity: 1;

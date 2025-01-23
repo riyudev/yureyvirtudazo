@@ -8,7 +8,6 @@ import useWindowWidth from "../helpers/useWindowWidth";
 import "../styles/Animation.css";
 
 function About() {
-  // Using the useInView hook for each animated element
   const [isInViewHeader, headerRef] = useInView();
   const [isInViewFigure, figureRef] = useInView();
   const [isInViewTechStack, techStackRef] = useInView();

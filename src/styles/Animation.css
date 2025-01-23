@@ -79,8 +79,8 @@
 }
 
 .growing-hr {
-  width: 0; /* Start with zero width */
-  visibility: hidden; /* Hide it initially */
+  width: 0;
+  visibility: hidden;
   animation: grow 0.6s ease-out forwards 0.3s;
 }
 
